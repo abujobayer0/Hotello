@@ -1,0 +1,7 @@
+.hero{
+    background-image: url('/src/components/images/Hero Img/hero.jpg');
+    filter: brightness(90%);
+
+}.satisfy{
+    font-family: 'Great Vibes', cursive;
+}
