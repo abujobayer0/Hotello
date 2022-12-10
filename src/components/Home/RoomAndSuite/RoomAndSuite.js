@@ -57,7 +57,7 @@ const RoomAndSuite = () => {
           </a>
         </div>
       </div>
-      <div className="carousel relative w-full px-12">
+      <div className="carousel relative w-full px-8">
         <div
           id="item1"
           className="carousel-item w-full flex gap-8 px-8 flex-wrap  md:flex-nowrap lg:flex-nowrap"

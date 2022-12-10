@@ -15,7 +15,7 @@ const Services = () => {
       <h1 className="pt-2 text-center text-stone-700 text-5xl">
         Best Service for you
       </h1>
-      <div className="pt-16 mb-12 px-20">
+      <div className="pt-16 mb-12 px-8 lg:px-20">
         <Service
           pra="Abundantly tree made. Days saw thing whales may, creeping after abundantly waters, fourth so were, gathered above cattle lights waters."
           name="ROOMS & APARTMENTS"
