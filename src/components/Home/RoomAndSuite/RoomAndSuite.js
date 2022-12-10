@@ -1,16 +1,30 @@
-import {
-  faBroomBall,
-  faRadiation,
-  faRainbow,
-  faRestroom,
-} from "@fortawesome/free-solid-svg-icons";
+import React, { useEffect, useState } from "react";
+import { faRainbow } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
 import Room from "./Room";
 
 const RoomAndSuite = () => {
+  const [deluxe, setDeluxe] = useState([]);
+  useEffect(() => {
+    fetch("deluxe.json")
+      .then((res) => res.json())
+      .then((data) => setDeluxe(data));
+  }, []);
+  const [standart, setStandart] = useState([]);
+  useEffect(() => {
+    fetch("standart.json")
+      .then((res) => res.json())
+      .then((data) => setStandart(data));
+  }, []);
+  const [studio, setStudio] = useState([]);
+  useEffect(() => {
+    fetch("studio.json")
+      .then((res) => res.json())
+      .then((data) => setStudio(data));
+  }, []);
+  const handleModal = () => {};
   return (
-    <div className="bg-stone-900 glass pb-12 hover:bg-stone-900">
+    <div className="bg-stone-900 glass pb-16 hover:bg-stone-900">
       <div className="w-full h-52">
         <div className="flex flex-col  justify-center items-center">
           <FontAwesomeIcon
@@ -48,30 +62,48 @@ const RoomAndSuite = () => {
           id="item1"
           className="carousel-item w-full flex gap-8 px-8 flex-wrap  md:flex-nowrap lg:flex-nowrap"
         >
-          <Room></Room>
-          <Room></Room>
-          <Room></Room>
+          {deluxe.map((r) => (
+            <Room
+              room={r}
+              key={r.id}
+              name={r.name}
+              description={r.description}
+              img={r.img}
+              price={r.price}
+              handleModal={handleModal}
+            ></Room>
+          ))}
         </div>
         <div
           id="item2"
           className="carousel-item w-full flex gap-8 px-8 flex-wrap  md:flex-nowrap lg:flex-nowrap"
         >
-          <Room></Room>
-          <Room></Room>
-          <Room></Room>
+          {standart.map((r) => (
+            <Room
+              key={r.id}
+              name={r.name}
+              description={r.description}
+              img={r.img}
+              price={r.price}
+            ></Room>
+          ))}
         </div>
         <div
           id="item3"
           className="carousel-item w-full flex gap-8 px-8 flex-wrap  md:flex-nowrap lg:flex-nowrap"
         >
-          <Room></Room>
-          <Room></Room>
-          <Room></Room>
+          {studio.map((r) => (
+            <Room
+              key={r.id}
+              name={r.name}
+              description={r.description}
+              img={r.img}
+              price={r.price}
+            ></Room>
+          ))}
         </div>
       </div>
-      <div className=" "></div>
     </div>
   );
 };
-
 export default RoomAndSuite;

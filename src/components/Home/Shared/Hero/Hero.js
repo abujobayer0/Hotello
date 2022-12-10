@@ -13,7 +13,7 @@ const Hero = () => {
         Welcome <span className="satisfy text-8xl  text-orange-500">to</span>
         Hotello
       </h1>
-      <div className="flex  lg:text-6xl  z-10 text-white gap-52 justify-center  absolute bottom-48">
+      <div className="lg:flex md:flex hidden  lg:text-6xl  z-10 text-white gap-52  justify-center  absolute bottom-48">
         <Icons name="DRINKS" icon={faWineGlassEmpty}></Icons>
         <Icons name="EVENTS" icon={faEnvelopeOpen}></Icons>
         <Icons name="GYM" icon={faBeerMugEmpty}></Icons>
