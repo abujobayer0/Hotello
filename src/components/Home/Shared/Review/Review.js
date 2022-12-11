@@ -2,9 +2,9 @@ import { faUsersBetweenLines } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import User from "./User";
-import userOne from ".././../../images/Clint Logo/pexels-fillipe-gomes-2301912.jpg";
-import userTwo from ".././../../images/Clint Logo/pexels-marx-ilagan-607894.jpg";
-import userThree from ".././../../images/Clint Logo/pexels-simon-robben-614810.jpg";
+import userOne from ".././../../images/Clint Logo/inspired-african-lady-dancing-with-eyes-closed-indoor-portrait-relaxed-black-girl-isolated.jpg";
+import userTwo from ".././../../images/Clint Logo/portrait-pretty-lady-red-warm-jacket-stylish-eyeglasses.jpg";
+import userThree from ".././../../images/Clint Logo/trendy-attractive-woman-with-wavy-hairstyle-with-modern-cool-earrings-big-red-lips-green-sundress-looking-into-camera.jpg";
 const Review = () => {
   return (
     <div className="w-full relative pb-12 h-fit py-8 text-stone-700 flex flex-col justify-center items-center bg-gray-100">

@@ -1,0 +1,7 @@
+.bgRoom{
+ height: 100vh;
+    background-image: url("./hotel_room_bed_stylish_modern_39745_1600x900(1).jpg");
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+}

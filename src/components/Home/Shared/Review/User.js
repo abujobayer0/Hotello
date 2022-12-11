@@ -21,7 +21,7 @@ const Uer = ({ name, position, review, img }) => {
       </div>
       <div className="w-full pt-4">
         <div className="flex justify-start gap-2 items-center">
-          <img src={img} className=" w-20 h-20 rounded-full " alt="" />
+          <img src={img} className=" w-24 mask  mask-circle " alt="" />
           <div>
             <h2 className="text-xl">{name} </h2>
             <h3 className="text-sm">{position}</h3>

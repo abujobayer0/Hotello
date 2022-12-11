@@ -65,6 +65,9 @@ const RoomAndSuite = () => {
           {deluxe.map((r) => (
             <Room
               room={r}
+              bed={r.bed}
+              childern={r.childern}
+              guest={r.guest}
               key={r.id}
               name={r.name}
               description={r.description}

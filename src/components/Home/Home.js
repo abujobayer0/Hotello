@@ -5,12 +5,14 @@ import CheckRates from "./Shared/CheckRates/CheckRates";
 import Hero from "./Shared/Hero/Hero";
 import HotelloGallery from "./Shared/HotelloGallery/HotelloGallery";
 import Review from "./Shared/Review/Review";
+import ScrollProgress from "./Shared/ScrollProgress/ScrollProgress";
 import Services from "./Shared/Services/Services";
 import WhyChoose from "./WhyChoose/WhyChoose";
 
 const Home = () => {
   return (
     <div className="">
+      <ScrollProgress></ScrollProgress>
       <Hero></Hero>
       <div className="flex justify-center">
         <CheckRates></CheckRates>

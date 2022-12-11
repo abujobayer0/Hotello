@@ -7,10 +7,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-const Room = ({ name, price, description, img, handleModal, room }) => {
+import { Link } from "react-router-dom";
+const Room = ({ name, price, description, img, childern, guest, bed }) => {
   console.log(name);
   return (
-    <div className="relative hover:scale-4 bg-white ">
+    <div className="relative  hover:scale-4 bg-white ">
       <div className="relative mb-1">
         <img className="" src={img} alt="" />
         <p className="px-6 w-fit glass bg-stone-800 hover:bg-stone-800 py-2 mt-4 ml-4 flex justify-center rounded-lg text-white font-semibold text-sm  ">
@@ -28,18 +29,19 @@ const Room = ({ name, price, description, img, handleModal, room }) => {
 
         <div className="flex py-2 items-center justify-center gap-8">
           <p className="flex justify-center items-center gap-2 text-md">
-            <FontAwesomeIcon className="text-orange-400" icon={faUser} /> 1
+            <FontAwesomeIcon className="text-orange-400" icon={faUser} />{" "}
+            {guest}
           </p>
           <p className="flex justify-center items-center gap-2 text-md">
             <FontAwesomeIcon
               className="text-orange-400"
               icon={faChildCombatant}
             />{" "}
-            2
+            {childern}
           </p>
           <p className="flex justify-center items-center gap-2 text-md">
             {" "}
-            <FontAwesomeIcon className="text-orange-400" icon={faBed} /> 3
+            <FontAwesomeIcon className="text-orange-400" icon={faBed} /> {bed}
           </p>
           <p className="flex justify-center items-center gap-2 text-md">
             {" "}
@@ -51,9 +53,11 @@ const Room = ({ name, price, description, img, handleModal, room }) => {
           </p>
         </div>
         <div className="py-2">
-          <button className="btn glass gap-2 w-48 bg-stone-800 hover:bg-stone-800">
-            Book Now <FontAwesomeIcon icon={faArrowRight} />
-          </button>
+          <Link to={"/rooms"}>
+            <button className="btn glass gap-2 w-48 bg-stone-800 hover:bg-stone-800">
+              Book Now <FontAwesomeIcon icon={faArrowRight} />
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,0 +1,167 @@
+[
+    {
+       "name":"Deluxe Black Room "
+       ,"description":"A spacious deluxe room which has a double bed and a single bed.Ideal for any",
+       "price":"2,030",
+       "guest":"2",
+       "childern":"2",
+       "bed":"1",
+       "image":"https://www.towerhotelwaterford.com/cmsGallery/imagerow/17419/resized/1600x900/deluxe_king_size_room.jpg","id":1
+    },
+    {
+       "name":"Deluxe King Room "
+       ,"description":"These luxury hotel rooms come with king size beds, views of the hotel's strik",
+       "price":"1,499",
+       "guest":"2",
+       "childern":"2",
+       "bed":"1",
+       "image":"https://cloudstorage.mosaic-collection.com/property/loeipalace/hotel-photos/accommodation/deluxe/deluxe_king-1.jpg","id":2
+    },
+    {
+       "name":"Deluxe Twin Room "
+       ,"description":"Designed for practicality and comfort, these contemporary-styled rooms featur",
+       "price":"1,623",
+       "guest":"2",
+       "childern":"3",
+       "bed":"2",
+       "image":"https://cloudstorage.amari.com/property/dhaka/hotel-photos/stay/deluxe_twin.jpg","id":3
+    },
+
+    {
+       "name":"Deluxe Broadway Room "
+       ,"description":"Completely renovated rooms tastefully decorated and with integrated in-room t",
+       "price":"1,150",
+       "guest":"2",
+       "childern":"2",
+       "bed":"1",
+       "image":"https://cloudstorage.mosaic-collection.com/property/loeipalace/hotel-photos/accommodation/deluxe/deluxe_king-2.jpg","id":4
+    },
+    {
+       "name":"Deluxe Yellow Room "
+       ,"description":"Massive three bedroom, two full bathroom corner apartment located in a beauti",
+       "price":"1,450",
+       "guest":"4",
+       "childern":"4",
+       "bed":"3",
+       "image":"https://cloudstorage.mosaic-collection.com/property/loeipalace/hotel-photos/accommodation/deluxe/deluxe_king-5.jpg","id":5
+    },
+    
+    {
+       "name":"Deluxe Contrast Room "
+       ,"description":"Live at the historic Plaza Residences. Spacious and bright one Bedroom Home o",
+       "price":"1,999",
+       "guest":"2",
+       "childern":"1",
+       "bed":"1",
+       "image":"https://www.joshhotel.com/images/slide-deluxe-01.jpg","id":6
+    },
+    {
+       "name":"Studio Broadway Room"
+       ,"description":"Classic Rooms in the our Hotel have been refurbished to a very high standard",
+       "price":"1,879",
+       "guest":"2",
+       "childern":"1",
+       "bed":"1",
+       "image":"https://image-tc.galaxy.tf/wijpeg-bo5xeeusj69afr1jrnia82ami/6-su4-living-room-frontal-th_wide.jpg?crop=0%2C62%2C1600%2C900","id":7
+    },
+    {
+       "name":"Standart Double Room"
+       ,"description":"Furnished in classic and essential style, these comfortable rooms have balcon",
+       "price":"2,900",
+       "guest":"2",
+       "childern":"2",
+       "bed":"1",
+       "image":"https://image-tc.galaxy.tf/wijpeg-38a6j7jkq8ezfduld03y6wn35/5-su4-doppelbett-vom-hochbett-spielzeug-th_wide.jpg?crop=0%2C62%2C1600%2C900","id":8
+    },
+    {
+       "name":"Standart Economic Room"
+       ,"description":"Economy Single Room is well-furnished guest rooms 11 square meters with the m",
+       "price":"3,900",
+       "guest":"3",
+       "childern":"4",
+       "bed":"1",
+       "image":"https://image-tc.galaxy.tf/wijpeg-8k1ynlshxuchomdb42ksgtsqq/7-su4-ansicht-tisch-th_wide.jpg?crop=0%2C62%2C1600%2C900","id":9
+    },
+    {
+       "name":"Standart VIP Room"
+       ,"description":"The classic room is equipped with desk and chair, 2 single beds, TV and plent",
+       "price":"3,500",
+       "guest":"2",
+       "childern":"2",
+       "bed":"1",
+       "image":"https://image-tc.galaxy.tf/wijpeg-cgegshi6m90wnpblqebaxl8q2/studio-room.jpg?width=1920","id":10
+    },
+    {
+       "name":"Standart Big Room"
+       ,"description":"Ah, the humble studio apartment. At one time, this dwelling was considered to",
+       "price":"4,000",
+       "guest":"3",
+       "childern":"2",
+       "bed":"2",
+       "image":"https://image-tc.galaxy.tf/wijpeg-8d7pxayihs9y86uguse9yg526/sandman-hotel-suites-vernon-studio-kitchen-2-doubles-01_wide.jpg?crop=0%2C84%2C1600%2C900","id":11
+    },
+    {
+       "name":"Studio Small Kids Room"
+       ,"description":"Kit out your kids room for less with our affordable children's furniture. Loa",
+       "price":"2,000",
+       "guest":"2",
+       "childern":"1",
+       "bed":"1",
+       "image":"https://cheras.komuneliving.com/img/asset/bWFpbi9pbWFnZXMvc3R1ZGlvLXF1ZWVuLS0tYmVkcm9vbS0xNjQ5MjE2NjQ3LmpwZw==?w=1600&h=900&fit=crop&s=d68a292b16b07007d12d42e63904f398","id":12
+    },
+    {
+       "name":"Studio Creative Room"
+       ,"description":"Living in an open-plan city apartment, packed with innovative storage, some ex",
+       "price":"1,500",
+       "guest":"2",
+       "childern":"1",
+       "bed":"1",
+       "image":"https://cloudstorage.amari.com/property/dhaka/hotel-photos/stay/deluxe_lounge.jpg","id":13
+    },
+    {
+       "name":"Studio Corporate Room"
+       ,"description":"Whether you are travelling on business or on leisure, our corporate studio ro",
+       "price":"1,990",
+       "guest":"2",
+       "childern":"2",
+       "bed":"2",
+       "image":"https://cloudstorage.shama.com/property/central/hotel-photos/accommodation/studio/studio_overview.jpg","id":14
+    },
+    {
+       "name":"Standart Blue Room",
+       "description":"This spacious 2 bed with large living room and Queen Size bedrooms boasts bra",
+       "price":"1,699",
+       "guest":"2",
+       "childern":"1",
+       "bed":"1",
+       "image":"https://mercerhotel.com/wp-content/uploads/2022/03/hero-rooms.jpg","id":15
+    },
+    {
+       "name":"Studio Legend Room",
+       "description":"Create a division between your sleeping area and the rest of the space with r",
+       "price":"2,799",
+       "guest":"2",
+       "childern":"1",
+       "bed":"1",
+       "image":"https://ramadaencorekathmandu.com/images/subpackage/6RgZf-studioroom3.jpg","id":16
+    },
+    {
+       "name":"Studio Big Room",
+       "description":"Studio room in our Hotel is a spacious and cozy room with a separate sitting",
+       "price":"2,999",
+       "guest":"3",
+       "childern":"1",
+       "bed":"2",
+       "image":"https://www.fourseasons.com/content/dam/fourseasons/images/web/BEV/BEV_1476_aspect16x9.jpg","id":17
+    },
+    {
+       "name":"Studio Rolex Room",
+       "description":"Studio room in our Hotel is a spacious and cozy room with a separate sitting",
+       "price":"2,999",
+       "guest":"3",
+       "childern":"2",
+       "bed":"2",
+       "image":"https://familyvacationist.com/wp-content/uploads/2021/09/View-of-Volcano-Bay-water-park-from-Universals-Cabana-Bay-Resort-Photo-Universal-Orlando.jpg","id":18
+    }
+
+]
