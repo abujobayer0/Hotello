@@ -10,7 +10,7 @@ const Selection = ({
 }) => {
   return (
     <div>
-      <div className="">
+      <div className=" w-48">
         <select className="select w-full  select-bordered">
           <option disabled selected>
             {selection}

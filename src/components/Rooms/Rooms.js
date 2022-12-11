@@ -12,6 +12,7 @@ import {
   faMoneyBill1Wave,
   faPersonBooth,
   faPersonShelter,
+  faSearch,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 const Rooms = () => {
@@ -34,7 +35,7 @@ const Rooms = () => {
           <h1 className="text-4xl text-white font-semibold">ROOM</h1>
         </div>
         <div className="w-full h-fit  pb-12 lg:pb-0 md:pb-0 flex pt-8 flex-wrap bg-gray-100">
-          <div className="flex sticky w-[70%]  mx-auto h-16  justify-between px-12">
+          <div className="flex  w-[80%] z-10 items-center  flex-wrap relative gap-4   mx-auto h-fit  justify-between px-12">
             <Selection
               selection="ROOM TYPE"
               optionone="DELUXE"
@@ -57,12 +58,13 @@ const Rooms = () => {
               optiontwo={3}
               optionthree={4}
             ></Selection>
-            <button className="bg-orange-600 h- glass mb-4 hover:bg-orange-600 text-white px-12 py-2">
+            <button className="bg-orange-600 h-fit glass  text-lg hover:bg-orange-600 text-white px-12 py-2">
+              <FontAwesomeIcon className="animate-pulse" icon={faSearch} />{" "}
               Filter
             </button>
           </div>
           {rooms.length === 18 ? (
-            <div className="flex w-full  flex-wrap py-12 px-6 justify-center items-center gap-8">
+            <div className="flex w-full relative  flex-wrap py-12 px-6 justify-center items-center gap-8">
               {rooms.map((room) => (
                 <SingleRoom
                   event={handleClick}
