@@ -33,7 +33,7 @@ const Rooms = () => {
         <div className="w-full  flex h-80 justify-center pt-12 lg:pt-20 md:pt-20 items-center ">
           <h1 className="text-4xl text-white font-semibold">ROOM</h1>
         </div>
-        <div className="w-full h-fit pb-12 lg:pb-0 md:pb-0 flex pt-8 flex-wrap bg-gray-100">
+        <div className="w-full h-fit  pb-12 lg:pb-0 md:pb-0 flex pt-8 flex-wrap bg-gray-100">
           <div className="flex sticky w-[70%]  mx-auto h-16  justify-between px-12">
             <Selection
               selection="ROOM TYPE"
@@ -61,24 +61,32 @@ const Rooms = () => {
               Filter
             </button>
           </div>
-
-          <div className="flex w-full  flex-wrap py-12 px-6 justify-center items-center gap-8">
-            {rooms.map((room) => (
-              <SingleRoom
-                event={handleClick}
-                price={room.price}
-                bed={room.bed}
-                room={room}
-                htmlFor="my-modal-6"
-                childern={room.childern}
-                guest={room.guest}
-                name={room.name}
-                description={room.description}
-                key={room.id}
-                img={room.image}
-              ></SingleRoom>
-            ))}
-          </div>
+          {rooms.length === 18 ? (
+            <div className="flex w-full  flex-wrap py-12 px-6 justify-center items-center gap-8">
+              {rooms.map((room) => (
+                <SingleRoom
+                  event={handleClick}
+                  price={room.price}
+                  bed={room.bed}
+                  room={room}
+                  htmlFor="my-modal-6"
+                  childern={room.childern}
+                  guest={room.guest}
+                  name={room.name}
+                  description={room.description}
+                  key={room.id}
+                  img={room.image}
+                ></SingleRoom>
+              ))}
+            </div>
+          ) : (
+            <div className="w-full flex justify-center items-center h-96">
+              <div
+                className="radial-progress w-20  glass   animate-spin"
+                style={{ "--value": 70 }}
+              ></div>
+            </div>
+          )}
         </div>
         <Footer></Footer>
       </div>
