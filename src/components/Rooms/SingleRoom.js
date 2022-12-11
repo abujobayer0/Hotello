@@ -21,7 +21,7 @@ const SingleRoom = ({
   bed,
 }) => {
   return (
-    <div className="relative w-80 hover:scale-4 bg-white ">
+    <div className="relative lg:w-80 w-full    bg-white ">
       <div className="relative mb-1">
         <img className="" src={img} alt="" />
         <p className="px-6 w-fit glass bg-stone-800 hover:bg-stone-800 py-2 mt-4 ml-4 flex justify-center rounded-lg text-white font-semibold text-sm  ">

@@ -62,7 +62,7 @@ const Rooms = () => {
             </button>
           </div>
 
-          <div className="flex w-full  flex-wrap p-12 justify-center items-center gap-8">
+          <div className="flex w-full  flex-wrap py-12 px-6 justify-center items-center gap-8">
             {rooms.map((room) => (
               <SingleRoom
                 event={handleClick}
