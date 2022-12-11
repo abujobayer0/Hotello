@@ -4,6 +4,7 @@ const Selection = ({
   selection,
   option,
   optionone,
+  status,
   optiontwo,
   optionthree,
   normal,
@@ -15,8 +16,8 @@ const Selection = ({
           <option disabled selected>
             {selection}
           </option>
-          <option>{option}</option>
-          <option>{normal}</option>
+          <option className={status}>{option}</option>
+          <option className={status}>{normal}</option>
           <option>{optionone}</option>
           <option>{optiontwo}</option>
           <option>{optionthree}</option>

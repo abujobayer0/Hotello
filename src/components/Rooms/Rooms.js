@@ -7,11 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBaby,
   faBed,
-  faDollar,
-  faMoneyBill,
   faMoneyBill1Wave,
-  faPersonBooth,
-  faPersonShelter,
   faSearch,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
@@ -34,10 +30,13 @@ const Rooms = () => {
         <div className="w-full  flex h-80 justify-center pt-12 lg:pt-20 md:pt-20 items-center ">
           <h1 className="text-4xl text-white font-semibold">ROOM</h1>
         </div>
-        <div className="w-full h-fit  pb-12 lg:pb-0 md:pb-0 flex pt-8 flex-wrap bg-gray-100">
-          <div className="flex  w-[80%] z-10 items-center  flex-wrap relative gap-4   mx-auto h-fit  justify-between px-12">
+        <div className="w-full h-fit  pb-12 lg:pb-0 md:pb-0 justify-center items-center flex pt-8 flex-wrap bg-gray-100">
+          <div className="flex  w-[80%]   items-center text-center flex-wrap relative gap-4    h-fit  justify-between px-12">
             <Selection
               selection="ROOM TYPE"
+              option="Classic --upcoming"
+              status="hidden"
+              normal="Luxary --upcoming"
               optionone="DELUXE"
               optiontwo="STANDART"
               optionthree="STUDIO"
@@ -92,10 +91,7 @@ const Rooms = () => {
         </div>
         <Footer></Footer>
       </div>
-      {/* The button to open modal */}
       <label htmlFor="my-modal-6"></label>
-
-      {/* Put this part before </body> tag */}
       <input type="checkbox" id="my-modal-6" className="modal-toggle" />
       <div className="modal w-full bg-transparent modal-bottom sm:modal-middle">
         <div className="modal-box bg-stone-600 hover:bg-stone-600 glass">

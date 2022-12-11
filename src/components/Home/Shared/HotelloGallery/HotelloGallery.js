@@ -35,7 +35,12 @@ const HotelloGallery = () => {
     <div className="w-full px-8  flex-col h-fit bg-stone-900 glass flex justify-center items-center py-8 hover:bg-stone-900 ">
       <FontAwesomeIcon className="text-4xl text-gray-100" icon={faWind} />
       <h1 className="text-5xl text-gray-100 py-4">Hotello Gallery</h1>
-      <ReactImageGallery items={images} />
+      <ReactImageGallery
+        showNav={Boolean}
+        showBullets={true}
+        showIndex={true}
+        items={images}
+      />
     </div>
   );
 };
