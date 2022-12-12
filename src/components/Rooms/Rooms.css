@@ -1,25 +1,15 @@
 .bgRoom{
  height: 100vh;
-    background-image: url("./hotel_room_bed_stylish_modern_39745_1600x900(1).jpg");
+    background-image: url("https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-position:center;
     background-size: cover;
+
     background-attachment: fixed;
 }.style {
     color: #fff;
     background-color: #582c83;
   };
-.bgRoom::before{
 
-
-  content: "";
-    width: 40%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    background: rgb(63, 55, 55);
-   border-radius: 50% 0% 0% 50%;
-}
 .modalBackground::before{
   content: "";
     width: 100%;
