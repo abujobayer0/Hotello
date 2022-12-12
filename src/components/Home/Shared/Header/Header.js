@@ -3,8 +3,8 @@ import React from "react";
 import logo from "../../../images/Logo/logo.png";
 import { faPhoneFlip, faCircle } from "@fortawesome/free-solid-svg-icons";
 const Header = () => {
-  const style = { "font-family": "'Raleway', sans-serif" };
-  const stylep = { "font-family": " 'Questrial', sans-serif" };
+  const style = { fontFamily: "'Raleway', sans-serif" };
+  const stylep = { fontFamily: " 'Questrial', sans-serif" };
   return (
     <div className="lg:flex z-10 hidden  absolute top-8 w-full items-center justify-center gap-52">
       <div className="text-white  text-sm">
@@ -20,7 +20,7 @@ const Header = () => {
         className="flex  items-center justify-center text-sm text-white"
       >
         <h2 className="border-r-2 pr-8">in New York</h2>
-        <div className="flex glass  h-10  gap-2 ml-4 justify-center items-center w-28">
+        <div className="flex   h-10  gap-2 ml-4 justify-center items-center w-28">
           <a className="" href="">
             <FontAwesomeIcon icon={faCircle} />
           </a>

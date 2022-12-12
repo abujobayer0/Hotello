@@ -1,7 +1,22 @@
 .hero{
-    background-image: url('/src/components/images/Hero Img/hero.jpg');
+    background-image: url('/src/components/images/Hero Img/pexels-mikhail-nilov-7820324-min.jpg');
     filter: brightness(90%);
 
 }.satisfy{
     font-family: 'Great Vibes', cursive;
+}
+.hero::before{
+    content: "";
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    opacity: 100%;
+  transition: all 0.5s ease;
+   border-radius: 10% 0% 0% 10%;
+}.hero:hover::before{
+    border-radius: 0%;
+    width: 100%;
+    opacity:10%;
 }

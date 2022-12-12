@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 const Service = ({ img, name, className, pra }) => {
-  const style = { "font-family": "Questrial', sans-serif" };
-  const stylep = { "font-family": "'Raleway', sans-serif" };
+  const style = { fontFamily: "Questrial', sans-serif" };
+  const stylep = { fontFamily: "'Raleway', sans-serif" };
   return (
     <div>
       <div className={className}>

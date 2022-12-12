@@ -2,16 +2,16 @@
     {"name":"Standart Blue Room","description":"This spacious 2 bed with large living room and Queen Size bedrooms boasts bra...","id":1, "price":60, "img":"https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-videoSixteenByNineJumbo1600.jpg"
     ,"guest":"2",
     "childern":"2",
-    "bed":"1"
+    "bed":"1","no":2
 },
     {"name":"Standart Big Room","ïd":2,"description":"Ah, the humble studio apartment. At one time, this dwelling was considered to...", "price":90, "img":"https://images.wallpaperscraft.com/image/single/hotel_room_bed_furniture_luxury_70053_1600x900.jpg"
     ,"guest":"2",
     "childern":"2",
-    "bed":"1"
+    "bed":"1","no":2
 },
     {"name":"Standart One Person Room",  "description":"The classic room is equipped with desk and chair, 2 single beds, TV and plent...", "id":3, "price":120, "img":"https://images.wallpaperscraft.com/image/single/hotel_room_bed_furniture_design_interior_109666_1600x900.jpg"
     ,"guest":"2",
     "childern":"2",
-    "bed":"1"
+    "bed":"1","no":2
 }
     ]

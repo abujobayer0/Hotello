@@ -8,3 +8,15 @@
     color: #fff;
     background-color: #582c83;
   };
+.bgRoom::before{
+
+
+  content: "";
+    width: 40%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: rgb(63, 55, 55);
+   border-radius: 50% 0% 0% 50%;
+}

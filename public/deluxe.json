@@ -3,17 +3,45 @@
         {"name":"Deluxe Contrast Room","description":"Live at the  historic Plaza Residence Spcacious and bright one Bedroom Home o...","id":1, "price":60, "img":"https://cloudstorage.mosaic-collection.com/property/loeipalace/hotel-photos/accommodation/deluxe/deluxe_king-4.jpg"
         ,"guest":"2",
     "childern":"2",
-    "bed":"1"
+    "bed":"1","no":1
     },
         {"name":"Deluxe Yellow Room","ïd":2,"description":"Massive three bedroom, two full bathroom corner apartment located in a beauti...", "price":90, "img":"https://cloudstorage.mosaic-collection.com/property/loeipalace/hotel-photos/accommodation/deluxe/deluxe_king-1.jpg"
         ,"guest":"2",
     "childern":"2",
-    "bed":"1"
+    "bed":"1","no":1
     },
         {"name":"Deluxe Twin Room",  "description":"Designed for practicality and comfort, these contemporary-styled rooms featur...", "id":3, "price":120, "img":"https://cloudstorage.mosaic-collection.com/property/loeipalace/hotel-photos/accommodation/deluxe/deluxe_twin-2.jpg"
         ,"guest":"2",
     "childern":"2",
-    "bed":"1"
-    }
+    "bed":"1","no":1
+    },    {"name":"Standart Blue Room","description":"This spacious 2 bed with large living room and Queen Size bedrooms boasts bra...","id":4, "price":60, "img":"https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-videoSixteenByNineJumbo1600.jpg"
+    ,"guest":"2",
+    "childern":"2",
+    "bed":"1","no":2
+},
+    {"name":"Standart Big Room","ïd":5,"description":"Ah, the humble studio apartment. At one time, this dwelling was considered to...", "price":90, "img":"https://images.wallpaperscraft.com/image/single/hotel_room_bed_furniture_luxury_70053_1600x900.jpg"
+    ,"guest":"2",
+    "childern":"2",
+    "bed":"1","no":2
+},
+    {"name":"Standart One Person Room",  "description":"The classic room is equipped with desk and chair, 2 single beds, TV and plent...", "id":6, "price":120, "img":"https://images.wallpaperscraft.com/image/single/hotel_room_bed_furniture_design_interior_109666_1600x900.jpg"
+    ,"guest":"2",
+    "childern":"2",
+    "bed":"1","no":2
+},  {"name":"Studio Small Kids Room","description":"Kit out your kids room for less with our affordable children's furniture. Loa...","id":7, "price":60, "img":"https://bangsarsouth.komuneliving.com/img/asset/bWFpbi9pbWFnZXMvdGhpbmtlci1zdHVkaW9fcm9vbV8xLmpwZw==?w=1600&h=900&fit=crop&s=d6f9d4d6164e5cec55789d7661b20ad5"
+,"guest":"2",
+"childern":"2",
+"bed":"1","no":3
+},
+{"name":"Studio Room Of Creative","ïd":8,"description":"Lving in an open-plan city apartment, packed with innovative storage, some ex...", "price":70, "img":"https://img.themirahotel.com/wp-content/uploads/2021/09/studio-room-04-d-169-1600x900.jpg"
+,"guest":"2",
+"childern":"2",
+"bed":"1","no":3
+},
+{"name":"Studio Corporate Room",  "description":"Whether you are travelling on business or on leisure, our corporate studio ro...", "id":9, "price":80, "img":"https://img.themirahotel.com/wp-content/uploads/2021/08/studio-room-03-d-169-1600x900.jpg"
+,"guest":"2",
+"childern":"2",
+"bed":"1","no":3
+}
     ]
  
