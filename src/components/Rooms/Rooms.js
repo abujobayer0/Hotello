@@ -228,7 +228,7 @@ const Rooms = () => {
       </div>
       <label htmlFor="my-modal-6"></label>
       <input type="checkbox" id="my-modal-6" className="modal-toggle" />
-      <div className="modal w-full bg-transparent modal-bottom sm:modal-middle">
+      <div className="modal w-full modalBackground modal-bottom sm:modal-middle">
         <div className="modal-box bg-stone-600 hover:bg-stone-600 glass">
           <label
             htmlFor="my-modal-6"

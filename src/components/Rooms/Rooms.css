@@ -20,3 +20,13 @@
     background: rgb(63, 55, 55);
    border-radius: 50% 0% 0% 50%;
 }
+.modalBackground::before{
+  content: "";
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: rgb(63, 55, 55);
+   opacity: 50%;
+}
