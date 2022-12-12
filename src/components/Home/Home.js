@@ -12,9 +12,7 @@ const Home = () => {
   return (
     <div className="">
       <Hero></Hero>
-      <div className="flex justify-center">
-        <CheckRates></CheckRates>
-      </div>
+
       <Services />
       <RoomAndSuite></RoomAndSuite>
       <WhyChoose></WhyChoose>
