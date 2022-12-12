@@ -13,7 +13,7 @@ import {
   faSearch,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import Filter from "./Filter";
+
 const Rooms = () => {
   const [studio, setStudio] = useState([]);
   const [modal, setModal] = useState([]);
@@ -116,13 +116,6 @@ const Rooms = () => {
   };
   return (
     <div>
-      <Filter
-        setPopular={setPopular}
-        setStudio={setStudio}
-        filtered={filtered}
-        studio={studio}
-      ></Filter>
-
       <div className="bgRoom w-full">
         <div className="w-full  flex h-80 justify-center pt-12 lg:pt-20 md:pt-20 items-center ">
           <h1 className="text-4xl text-white font-semibold">ROOM</h1>
