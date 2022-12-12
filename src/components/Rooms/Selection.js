@@ -8,20 +8,28 @@ const Selection = ({
   optiontwo,
   optionthree,
   normal,
+  handler,
+  optionFour,
 }) => {
   return (
-    <div>
-      <div className=" w-48">
-        <select className="select w-full  select-bordered">
-          <option disabled selected>
-            {selection}
-          </option>
-          <option className={status}>{option}</option>
-          <option className={status}>{normal}</option>
-          <option>{optionone}</option>
-          <option>{optiontwo}</option>
-          <option>{optionthree}</option>
-        </select>
+    <div className=" px-4 flex flex-col  justify-center items-center">
+      <h3 className="text-lg text-gray-100 mb-2">{selection}</h3>
+      <div className=" flex text-gray-100 glass justify-center items-center w-full">
+        <button onClick={() => handler(0)} className="w-fit  px-4 text-sm py-2">
+          {normal}
+        </button>
+        <button onClick={() => handler(1)} className="w-fit  px-4 text-sm py-2">
+          {optionone}
+        </button>
+        <button onClick={() => handler(2)} className="w-fit  px-4 text-sm py-2">
+          {optiontwo}
+        </button>
+        <button onClick={() => handler(3)} className="w-fit  px-4 text-sm py-2">
+          {optionthree}
+        </button>
+        <button onClick={() => handler(4)} className={status}>
+          {optionFour}
+        </button>
       </div>
     </div>
   );

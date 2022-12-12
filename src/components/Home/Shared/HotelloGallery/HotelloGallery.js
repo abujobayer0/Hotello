@@ -12,6 +12,7 @@ import imageOne from ".././../../images/Caousel/pexels-azri-suratmin-122244.jpg"
 import imageTwo from ".././../../images/Caousel/pexels-caio-6144876.jpg";
 import imageThree from ".././../../images/Caousel/pexels-elevate-1267320.jpg";
 import imageFour from ".././../../images/Caousel/pexels-kendall-hoopes-635041.jpg";
+import imageFive from ".././../../images/Caousel/pexels-pixabay-271624.jpg";
 const HotelloGallery = () => {
   const images = [
     {
@@ -29,6 +30,10 @@ const HotelloGallery = () => {
     {
       original: imageFour,
       thumbnail: imageFour,
+    },
+    {
+      original: imageFive,
+      thumbnail: imageFive,
     },
   ];
   return (

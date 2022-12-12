@@ -4,89 +4,222 @@ import Selection from "./Selection";
 import SingleRoom from "./SingleRoom";
 import Footer from ".././Home/Shared/Footer/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   faBaby,
   faBed,
+  faMagnifyingGlass,
   faMoneyBill1Wave,
   faSearch,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import Filter from "./Filter";
 const Rooms = () => {
-  const [rooms, setRooms] = useState([]);
+  const [studio, setStudio] = useState([]);
   const [modal, setModal] = useState([]);
-  useEffect(() => {
-    fetch("rooms.json")
-      .then((res) => res.json())
-      .then((data) => setRooms(data));
-  }, []);
+  const [popular, setPopular] = useState([]);
+  const [filtered, setFiltered] = useState([]);
+  const [activeGenre, setActiveGenre] = useState(0);
+  const fetchPopular = async () => {
+    const response = await fetch("rooms.json");
+    const rooms = await response.json();
+    setPopular(rooms);
+    setFiltered(rooms);
+    setStudio(rooms);
+  };
 
+  useEffect(() => {
+    fetchPopular();
+  }, []);
   const handleClick = (e) => {
     console.log(e);
     setModal(e);
   };
+  console.log(popular.length);
+  const searchHandleRoom = (e) => {
+    if (e === 0) {
+      setPopular(filtered);
+      setStudio(filtered);
+    } else if (e === 1) {
+      const newfiltered = studio.filter((r) => r.no === e);
+      setPopular(newfiltered);
+    } else if (e === 2) {
+      const newfiltered = studio.filter((r) => r.no === e);
+      setPopular(newfiltered);
+    } else if (e === 3) {
+      const newfiltered = studio.filter((r) => r.no === e);
+      setPopular(newfiltered);
+    } else {
+      setPopular(filtered);
+    }
+  };
+  const searchHandleGuest = (e) => {
+    if (e === 0) {
+      setPopular(filtered);
+      setStudio(filtered);
+    } else if (e === 1) {
+      const newfiltered = studio.filter((r) => r.guest === e);
+      setPopular(newfiltered);
+    } else if (e === 2) {
+      const newfiltered = studio.filter((r) => r.guest === e);
+      setPopular(newfiltered);
+    } else if (e === 3) {
+      const newfiltered = studio.filter((r) => r.guest === e);
+      setPopular(newfiltered);
+    } else if (e === 4) {
+      const newfiltered = studio.filter((r) => r.guest === e);
+      setPopular(newfiltered);
+    } else {
+      setPopular(filtered);
+    }
+  };
+  const searchHandleChilden = (e) => {
+    if (e === 0) {
+      setPopular(filtered);
+      setStudio(filtered);
+    } else if (e === 1) {
+      const newfiltered = studio.filter((r) => r.childern === e);
+      setPopular(newfiltered);
+    } else if (e === 2) {
+      const newfiltered = studio.filter((r) => r.childern === e);
+      setPopular(newfiltered);
+    } else if (e === 3) {
+      const newfiltered = studio.filter((r) => r.childern === e);
+      setPopular(newfiltered);
+    } else if (e === 4) {
+      const newfiltered = studio.filter((r) => r.childern === e);
+      setPopular(newfiltered);
+    } else {
+      setPopular(filtered);
+    }
+  };
+
+  const searchHandleBed = (e) => {
+    if (e === 0) {
+      setPopular(filtered);
+      setStudio(filtered);
+    } else if (e === 1) {
+      const newfiltered = studio.filter((r) => r.bed === e);
+      setPopular(newfiltered);
+    } else if (e === 2) {
+      const newfiltered = studio.filter((r) => r.bed === e);
+      setPopular(newfiltered);
+    } else if (e === 3) {
+      const newfiltered = studio.filter((r) => r.bed === e);
+      setPopular(newfiltered);
+    } else if (e === 4) {
+      const newfiltered = studio.filter((r) => r.bed === e);
+      setPopular(newfiltered);
+    } else {
+      setPopular(filtered);
+    }
+  };
   return (
     <div>
+      <Filter
+        setPopular={setPopular}
+        setStudio={setStudio}
+        filtered={filtered}
+        studio={studio}
+      ></Filter>
+
       <div className="bgRoom w-full">
         <div className="w-full  flex h-80 justify-center pt-12 lg:pt-20 md:pt-20 items-center ">
           <h1 className="text-4xl text-white font-semibold">ROOM</h1>
         </div>
-        <div className="w-full h-fit  pb-12 lg:pb-0 md:pb-0 justify-center items-center flex pt-8 flex-wrap bg-gray-100">
-          <div className="flex  w-[80%]   items-center text-center flex-wrap relative gap-4    h-fit  justify-between px-12">
-            <Selection
-              selection="ROOM TYPE"
-              option="Classic --upcoming"
-              status="hidden"
-              normal="Luxary --upcoming"
-              optionone="DELUXE"
-              optiontwo="STANDART"
-              optionthree="STUDIO"
-            ></Selection>
-            <Selection
-              selection="GUEST"
-              option={0}
-              normal={1}
-              optionone={2}
-              optiontwo={3}
-              optionthree={4}
-            ></Selection>
-            <Selection
-              selection="CHILDERN"
-              option={0}
-              normal={1}
-              optionone={2}
-              optiontwo={3}
-              optionthree={4}
-            ></Selection>
-            <button className="bg-orange-600 h-fit glass  text-lg hover:bg-orange-600 text-white px-12 py-2">
-              <FontAwesomeIcon className="animate-pulse" icon={faSearch} />{" "}
-              Filter
-            </button>
+        <div className="w-full h-fit  pb-12 lg:pb-0 md:pb-0 justify-center items-center flex flex-wrap bg-gray-100">
+          <div className="flex  w-full  items-center text-center flex-wrap relative   bg-orange-700  glass py-4 h-fit hover:bg-orange-700  justify-center ">
+            <div className="flex  w-full  items-center text-center flex-wrap relative     glass py-4 h-fit justify-center ">
+              <Selection
+                selection="ROOM TYPE"
+                handler={searchHandleRoom}
+                status="hidden w-fit  px-4 text-sm py-2"
+                normal="ALL"
+                optionone="DELUXE"
+                optiontwo="STUDIO"
+                optionthree="STANDART"
+              ></Selection>
+              <Selection
+                selection="GUEST"
+                option={0}
+                handler={searchHandleGuest}
+                normal="ALL"
+                optionone={1}
+                status=" w-fit  px-4 text-sm py-2"
+                optiontwo={2}
+                optionFour={4}
+                optionthree={3}
+              ></Selection>
+              <Selection
+                selection="CHILDERN"
+                option={0}
+                normal="ALL"
+                optionone={1}
+                handler={searchHandleChilden}
+                status=" w-fit  px-4 text-sm py-2"
+                optiontwo={2}
+                optionFour={4}
+                optionthree={3}
+              ></Selection>
+              <Selection
+                selection="BED"
+                status="hidden w-fit  px-4 text-sm py-2"
+                option={0}
+                normal="ALL"
+                handler={searchHandleBed}
+                optionone={1}
+                optionthree={3}
+                optiontwo={2}
+              ></Selection>
+            </div>
           </div>
-          {rooms.length === 18 ? (
-            <div className="flex w-full relative  flex-wrap py-12 px-6 justify-center items-center gap-8">
-              {rooms.map((room) => (
-                <SingleRoom
-                  event={handleClick}
-                  price={room.price}
-                  bed={room.bed}
-                  room={room}
-                  htmlFor="my-modal-6"
-                  childern={room.childern}
-                  guest={room.guest}
-                  name={room.name}
-                  description={room.description}
-                  key={room.id}
-                  img={room.image}
-                ></SingleRoom>
-              ))}
+
+          {studio === "" || popular === "" ? (
+            <div className="alert shadow-lg">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  className="stroke-info flex-shrink-0 w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+                <span>No Longer avaiable..</span>
+              </div>
             </div>
           ) : (
-            <div className="w-full flex justify-center items-center h-96">
-              <div
-                className="radial-progress w-20  glass   animate-spin"
-                style={{ "--value": 70 }}
-              ></div>
-            </div>
+            <motion.div className="flex w-full relative  flex-wrap py-12 px-6 justify-center items-center gap-8">
+              {filtered.length === 18 ? (
+                <AnimatePresence>
+                  {popular.map((room) => (
+                    <SingleRoom
+                      event={handleClick}
+                      price={room.price}
+                      bed={room.bed}
+                      room={room}
+                      htmlFor="my-modal-6"
+                      childern={room.childern}
+                      guest={room.guest}
+                      name={room.name}
+                      description={room.description}
+                      key={room.id}
+                      img={room.image}
+                    ></SingleRoom>
+                  ))}
+                </AnimatePresence>
+              ) : (
+                <div
+                  className="radial-progress animate-spin"
+                  style={{ "--value": 70 }}
+                ></div>
+              )}
+            </motion.div>
           )}
         </div>
         <Footer></Footer>
