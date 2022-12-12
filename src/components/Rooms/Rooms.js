@@ -8,9 +8,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   faBaby,
   faBed,
-  faMagnifyingGlass,
+  faFilter,
   faMoneyBill1Wave,
-  faSearch,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -19,7 +18,7 @@ const Rooms = () => {
   const [modal, setModal] = useState([]);
   const [popular, setPopular] = useState([]);
   const [filtered, setFiltered] = useState([]);
-  const [activeGenre, setActiveGenre] = useState(0);
+
   const fetchPopular = async () => {
     const response = await fetch("rooms.json");
     const rooms = await response.json();
@@ -59,6 +58,7 @@ const Rooms = () => {
       setStudio(filtered);
     } else if (e === 1) {
       const newfiltered = studio.filter((r) => r.guest === e);
+
       setPopular(newfiltered);
     } else if (e === 2) {
       const newfiltered = studio.filter((r) => r.guest === e);
@@ -120,53 +120,7 @@ const Rooms = () => {
         <div className="w-full  flex h-80 justify-center pt-12 lg:pt-20 md:pt-20 items-center ">
           <h1 className="text-4xl text-white font-semibold">ROOM</h1>
         </div>
-        <div className="w-full h-fit  pb-12 lg:pb-0 md:pb-0 justify-center items-center flex flex-wrap bg-gray-100">
-          <div className="flex  w-full  items-center text-center flex-wrap relative   bg-orange-700  glass py-4 h-fit hover:bg-orange-700  justify-center ">
-            <div className="flex  w-full  items-center text-center flex-wrap relative     glass py-4 h-fit justify-center ">
-              <Selection
-                selection="ROOM TYPE"
-                handler={searchHandleRoom}
-                status="hidden w-fit  px-4 text-sm py-2"
-                normal="ALL"
-                optionone="DELUXE"
-                optiontwo="STUDIO"
-                optionthree="STANDART"
-              ></Selection>
-              <Selection
-                selection="GUEST"
-                option={0}
-                handler={searchHandleGuest}
-                normal="ALL"
-                optionone={1}
-                status=" w-fit  px-4 text-sm py-2"
-                optiontwo={2}
-                optionFour={4}
-                optionthree={3}
-              ></Selection>
-              <Selection
-                selection="CHILDERN"
-                option={0}
-                normal="ALL"
-                optionone={1}
-                handler={searchHandleChilden}
-                status=" w-fit  px-4 text-sm py-2"
-                optiontwo={2}
-                optionFour={4}
-                optionthree={3}
-              ></Selection>
-              <Selection
-                selection="BED"
-                status="hidden w-fit  px-4 text-sm py-2"
-                option={0}
-                normal="ALL"
-                handler={searchHandleBed}
-                optionone={1}
-                optionthree={3}
-                optiontwo={2}
-              ></Selection>
-            </div>
-          </div>
-
+        <div className="w-full h-fit flex flex-col-reverse lg:flex-row justify-between pb-12 lg:pb-0 md:pb-0  bg-gray-100">
           {studio === "" || popular === "" ? (
             <div className="alert shadow-lg">
               <div>
@@ -214,6 +168,61 @@ const Rooms = () => {
               )}
             </motion.div>
           )}
+          <div
+            tabIndex={0}
+            className="collapse lg:collapse-open lg:w-[45%] m-2 pt-10 h-fit w-full"
+          >
+            <input type="checkbox" className="peer" />
+            <div className="collapse-title glass text-white text-2xl bg-stone-800 hover:bg-stone-800">
+              Filter Here <FontAwesomeIcon icon={faFilter} />
+            </div>
+
+            <div className="flex collapse-content items-center text-center flex-wrap relative  py-4 h-fit   justify-center ">
+              <div className="flex w-full gap-12  items-center text-center flex-wrap relative     glass py-4 h-fit justify-center ">
+                <Selection
+                  selection="ROOM TYPE"
+                  handler={searchHandleRoom}
+                  status="hidden w-fit focus:bg-stone-600 px-4 text-sm py-2"
+                  normal="ALL"
+                  optionone="DELUXE"
+                  optiontwo="STUDIO"
+                  optionthree="STANDART"
+                ></Selection>
+                <Selection
+                  selection="GUEST"
+                  option={0}
+                  handler={searchHandleGuest}
+                  normal="ALL"
+                  optionone={1}
+                  status=" w-fit focus:bg-stone-600 px-4 text-sm py-2"
+                  optiontwo={2}
+                  optionFour={4}
+                  optionthree={3}
+                ></Selection>
+                <Selection
+                  selection="CHILDERN"
+                  option={0}
+                  normal="ALL"
+                  optionone={1}
+                  handler={searchHandleChilden}
+                  status=" w-fit focus:bg-stone-600 px-4 text-sm py-2"
+                  optiontwo={2}
+                  optionFour={4}
+                  optionthree={3}
+                ></Selection>
+                <Selection
+                  selection="BED"
+                  status="hidden w-fit focus:bg-stone-600 px-4 text-sm py-2"
+                  option={0}
+                  normal="ALL"
+                  handler={searchHandleBed}
+                  optionone={1}
+                  optionthree={3}
+                  optiontwo={2}
+                ></Selection>
+              </div>
+            </div>
+          </div>
         </div>
         <Footer></Footer>
       </div>
