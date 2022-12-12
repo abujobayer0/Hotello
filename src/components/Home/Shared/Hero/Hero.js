@@ -23,7 +23,7 @@ const Hero = () => {
           }}
         />{" "}
       </h1>
-      <div className="lg:flex md:flex hidden lg:flex-col  lg:absolute lg:bottom-0 lg:top-28 lg:right-4 lg:h-fit lg:text-6xl text-4xl z-10 text-white gap-52 lg:gap-12  justify-center  absolute bottom-48">
+      <div className="lg:flex md:flex flex lg:flex-col  lg:absolute lg:bottom-0 lg:top-28 lg:right-4 lg:h-fit lg:text-6xl text-4xl z-10 text-white gap-2 lg:gap-12  justify-center  absolute bottom-48">
         <Icons name="DRINKS" icon={faWineGlassEmpty}></Icons>
         <Icons name="EVENTS" icon={faEnvelopeOpen}></Icons>
         <Icons name="GYM" icon={faBeerMugEmpty}></Icons>
