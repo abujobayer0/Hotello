@@ -42,10 +42,10 @@ const Services = () => {
           ))}
         </div>
       ) : (
-        <div className="w-full  flex justify-center items-center bg-gray-100 h-96">
+        <div className="w-full py-48  flex gap-12 justify-center items-center bg-gray-100 h-96">
           <div
-            className="radial-progress animate-spin"
-            style={{ "--value": 70 }}
+            className="radial-progress glass   animate-spin"
+            style={{ "--value": 50 }}
           ></div>
           <div className="text-2xl">
             <TypewriterComponent
