@@ -47,21 +47,6 @@ const Services = () => {
             className="radial-progress glass   animate-spin"
             style={{ "--value": 50 }}
           ></div>
-          <div className="text-2xl">
-            <TypewriterComponent
-              onInit={(typewriter) => {
-                typewriter
-                  .typeString("Loading...")
-                  .pauseFor(100)
-                  .deleteAll()
-                  .typeString("Loading...")
-                  .pauseFor(1000)
-                  .deleteAll()
-                  .typeString("Loading... ")
-                  .start();
-              }}
-            />
-          </div>
         </div>
       )}
       <Footer></Footer>
