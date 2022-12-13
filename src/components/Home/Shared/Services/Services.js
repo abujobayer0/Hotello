@@ -21,6 +21,7 @@ const Services = () => {
           name="ROOMS & APARTMENTS"
           className="flex text-stone-700  glass flex-wrap lg:flex-nowrap md:flex-nowrap w-full  justify-center items-center"
           img={roomImg}
+          to={"/rooms"}
         ></Service>
 
         <Service
@@ -28,6 +29,7 @@ const Services = () => {
           name="RESTURENT"
           className="flex glass text-stone-700  flex-wrap lg:flex-nowrap md:flex-nowrap flex-row-reverse  w-full  justify-center items-center"
           img={resturentImg}
+          to={"/services"}
         ></Service>
 
         <Service
@@ -35,6 +37,7 @@ const Services = () => {
           name="SPA & FITNESS"
           className="flex text-stone-700  glass flex-wrap lg:flex-nowrap md:flex-nowrap  w-full  justify-center items-center"
           img={gymImg}
+          to={"/services"}
         ></Service>
       </div>
     </div>

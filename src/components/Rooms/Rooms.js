@@ -12,6 +12,7 @@ import {
   faMoneyBill1Wave,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import TypewriterComponent from "typewriter-effect";
 
 const Rooms = () => {
   const [studio, setStudio] = useState([]);
@@ -117,8 +118,21 @@ const Rooms = () => {
   return (
     <div>
       <div className="bgRoom w-full">
-        <div className="w-full  flex h-80 justify-center pt-12 lg:pt-20 md:pt-20 items-center ">
-          <h1 className="text-4xl text-white font-semibold">ROOM</h1>
+        <div className="w-full flex h-80 justify-center pt-12 lg:pt-20 md:pt-20 items-center ">
+          <h1 className="text-4xl text-center text-white font-semibold">
+            {" "}
+            <TypewriterComponent
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString("Our Rooms Book Now ")
+                  .pauseFor(1000)
+
+                  .deleteAll()
+                  .typeString("Book Your Favourate Room")
+                  .start();
+              }}
+            />
+          </h1>
         </div>
         <div className="w-full h-fit flex flex-col-reverse lg:flex-row justify-between pb-12 lg:pb-0 md:pb-0  bg-gray-100">
           {studio === "" || popular === "" ? (
