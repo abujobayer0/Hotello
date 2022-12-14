@@ -7,6 +7,7 @@ import Error from "./components/Error/Error";
 import ScrollProgress from "./components/Home/Shared/ScrollProgress/ScrollProgress";
 import Rooms from "./components/Rooms/Rooms";
 import Services from "./components/Services/Services";
+import News from "./components/News/News";
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ function App() {
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/rooms" element={<Rooms></Rooms>}></Route>
         <Route path="/services" element={<Services></Services>}></Route>
+        <Route path="/news" element={<News></News>}></Route>
         <Route path="*" element={<Error></Error>}></Route>
       </Routes>
     </div>

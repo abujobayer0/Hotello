@@ -9,7 +9,8 @@ const Header = () => {
     <div className="lg:flex z-10 hidden  absolute top-8 w-full items-center justify-center gap-52">
       <div className="text-white  text-sm">
         <h1 style={stylep}>
-          <FontAwesomeIcon icon={faPhoneFlip} /> +31 (0) 20 507 000
+          <FontAwesomeIcon className="text-orange-400" icon={faPhoneFlip} /> +31
+          (0) 20 507 000
         </h1>
       </div>
       <div className="logo">

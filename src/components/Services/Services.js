@@ -34,6 +34,7 @@ const Services = () => {
         <div className="w-full h-fit justify-center items-center gap-12 py-10 bg-gray-100 flex flex-wrap">
           {items.map((item) => (
             <ServiceItem
+              key={item.id}
               name={item.name}
               img={item.img}
               price={item.price}
