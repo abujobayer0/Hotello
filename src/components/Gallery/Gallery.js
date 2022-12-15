@@ -81,6 +81,8 @@ const Gallery = () => {
             </SwiperSlide>
           </Swiper>
           <div className="w-full relative max-h-full">
+            <h1 className="text-2xl">GALLERY</h1>
+
             <ImagesJs></ImagesJs>
           </div>
         </div>

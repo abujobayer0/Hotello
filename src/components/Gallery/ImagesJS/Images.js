@@ -15,7 +15,7 @@ const Images = () => {
 
   return (
     <div>
-      <div className="w-full glass h-fit flex flex-col-reverse lg:flex-row justify-between pb-12 lg:pb-0 md:pb-0 ">
+      <div className="w-full  h-fit flex flex-col-reverse lg:flex-row justify-between pb-12 lg:pb-0 md:pb-0 ">
         <motion.div className="flex w-full relative  flex-wrap py-12 px-6 justify-center items-center gap-8">
           <AnimatePresence>
             {filtered.map((room) => (
