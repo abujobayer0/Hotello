@@ -43,7 +43,7 @@ const Footer = () => {
           </a>
           <a className="link link-hover">Tel.: +1 998 150 3020</a>
           <a className="link link-hover">Fax.: +1 998 150 3020</a>
-          <a className="link link-hover">info@stylemixthemes.com</a>
+          <a className="link link-hover">zubayer.munna.dev@gmail.com</a>
         </div>
         <div>
           <span className="footer-title">Legal</span>

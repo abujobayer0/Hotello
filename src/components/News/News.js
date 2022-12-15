@@ -6,18 +6,24 @@ import SmallRoom from "./SmallRoom";
 const News = () => {
   const [news, setNews] = useState([]);
   const [smallRooms, setSmallRooms] = useState([]);
+  const [search, setSearch] = useState([]);
+  const [input, setInput] = useState([]);
   useEffect(() => {
     fetch("deluxe.json")
       .then((res) => res.json())
       .then((data) => setSmallRooms(data));
   }, []);
   useEffect(() => {
-    fetch(`news.json`)
+    fetch("news.json")
       .then((res) => res.json())
       .then((data) => {
         setNews(data);
+        setSearch(data);
       });
   }, []);
+  // console.log(
+  //   search.filter((m) => m.name.toLowerCase().includes("new") === true)
+  // );
 
   return (
     <div className="w-full  flex flex-col  relative bgRoom">
@@ -40,23 +46,26 @@ const News = () => {
         </h1>
       </div>
       <div className="flex w-full h-fit justify-center">
-        <div className="w-full relative h-fit justify-center md:justify-between  gap-12 py-10 bg-gray-100 flex flex-wrap md:flex-nowrap lg:flex-nowrap ">
-          <div className="px-4 gap-4 flex flex-col">
-            {news.map((news) => (
-              <NewsItem name={news.name} detail={news.detail} img={news.img}>
-                {" "}
-              </NewsItem>
+        <div className="w-full relative h-fit justify-center md:gap-0 gap-12 py-10 bg-gray-100 flex flex-wrap md:flex-nowrap lg:flex-nowrap ">
+          <div className="  px-4  gap-4 flex flex-col">
+            {news.map((newsUpdate) => (
+              <NewsItem
+                name={newsUpdate.name}
+                detail={newsUpdate.detail}
+                img={newsUpdate.img}
+              ></NewsItem>
             ))}
           </div>
-          <div>
-            <div className="form-control">
-              <div className="input-group">
+          <div className="w-full px-8">
+            <div className="form-control ">
+              <div className="input-group ">
                 <input
+                  id="SearchInput"
                   type="text"
                   placeholder="Search…"
-                  className="input w-full input-bordered"
+                  className="input w-full md:w-72 lg:w-full input-bordered"
                 />
-                <button className="btn bg-orange-600 glass hover:bg-orange-600 btn-square">
+                <button className="btn bg-orange-600  glass hover:bg-orange-600 btn-square">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -74,60 +83,60 @@ const News = () => {
                 </button>
               </div>
             </div>
-            <div className="flex gap-2 p-4 flex-col">
-              <div className=" flex gap-2">
-                <div className="w-28">
+            <div className="flex gap-2 w-full p-4 flex-col">
+              <div className=" flex w-full justify-center gap-2">
+                <div className="w-28 lg:w-28 md:w-24">
                   <img
                     className=" w-full"
                     src={
-                      "https://pix10.agoda.net/hotelImages/5721/-1/253c84072ffabdf942b6df41413b2ec3.jpg?ca=6&ce=1&s=1024x768"
+                      "https://images.wallpaperscraft.com/image/single/room_style_hotel_bed_70002_1600x900.jpg"
                     }
                     alt=""
                   />
                 </div>
-                <div className="w-28">
+                <div className="w-28 lg:w-28 md:w-24">
                   <img
                     className=" w-full"
                     src={
-                      "https://pix10.agoda.net/hotelImages/5721/-1/253c84072ffabdf942b6df41413b2ec3.jpg?ca=6&ce=1&s=1024x768"
+                      "https://images.wallpaperscraft.com/image/single/room_bed_design_interior_hotel_bedroom_balcony_39708_1600x900.jpg"
                     }
                     alt=""
                   />
                 </div>
-                <div className="w-28">
+                <div className="w-28 lg:w-28 md:w-24">
                   <img
                     className=" w-full"
                     src={
-                      "https://pix10.agoda.net/hotelImages/5721/-1/253c84072ffabdf942b6df41413b2ec3.jpg?ca=6&ce=1&s=1024x768"
+                      "https://images.wallpaperscraft.com/image/single/room_bed_design_interior_modern_25710_1600x900.jpg"
                     }
                     alt=""
                   />
                 </div>
               </div>
-              <div className="flex gap-2">
-                <div className="w-28">
+              <div className="flex justify-center gap-2">
+                <div className="w-28 lg:w-28 md:w-24">
                   <img
                     className=" w-full"
                     src={
-                      "https://pix10.agoda.net/hotelImages/5721/-1/253c84072ffabdf942b6df41413b2ec3.jpg?ca=6&ce=1&s=1024x768"
+                      "https://images.wallpaperscraft.com/image/single/room_bed_style_interior_design_49197_1600x900.jpg"
                     }
                     alt=""
                   />
                 </div>
-                <div className="w-28">
+                <div className="w-28 lg:w-28 md:w-24">
                   <img
                     className=" w-full"
                     src={
-                      "https://pix10.agoda.net/hotelImages/5721/-1/253c84072ffabdf942b6df41413b2ec3.jpg?ca=6&ce=1&s=1024x768"
+                      "https://images.wallpaperscraft.com/image/single/room_design_style_interior_modern_67313_1600x900.jpg"
                     }
                     alt=""
                   />
                 </div>
-                <div className="w-28">
+                <div className="lg:w-28 w-28 md:w-24">
                   <img
                     className=" w-full"
                     src={
-                      "https://pix10.agoda.net/hotelImages/5721/-1/253c84072ffabdf942b6df41413b2ec3.jpg?ca=6&ce=1&s=1024x768"
+                      "https://images.wallpaperscraft.com/image/single/room_furniture_style_interior_design_66307_1600x900.jpg"
                     }
                     alt=""
                   />
