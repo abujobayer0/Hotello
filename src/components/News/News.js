@@ -6,8 +6,7 @@ import SmallRoom from "./SmallRoom";
 const News = () => {
   const [news, setNews] = useState([]);
   const [smallRooms, setSmallRooms] = useState([]);
-  const [search, setSearch] = useState([]);
-  const [input, setInput] = useState([]);
+
   useEffect(() => {
     fetch("deluxe.json")
       .then((res) => res.json())
@@ -18,7 +17,6 @@ const News = () => {
       .then((res) => res.json())
       .then((data) => {
         setNews(data);
-        setSearch(data);
       });
   }, []);
   // console.log(
