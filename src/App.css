@@ -1,4 +1,20 @@
 .app{
     scroll-behavior: smooth;
     transition: all ease 0.5s;
-}
+}/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    
+    background-color:rgb(105, 105, 105) ;
+
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: orange; 
+  
+  }

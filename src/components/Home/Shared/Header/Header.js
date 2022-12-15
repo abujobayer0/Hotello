@@ -1,7 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import logo from "../../../images/Logo/logo.png";
-import { faPhoneFlip, faCircle } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPhoneFlip,
+  faCircle,
+  faChessBoard,
+  faAtlas,
+} from "@fortawesome/free-solid-svg-icons";
 const Header = () => {
   const style = { fontFamily: "'Raleway', sans-serif" };
   const stylep = { fontFamily: " 'Questrial', sans-serif" };
@@ -29,7 +34,7 @@ const Header = () => {
             <FontAwesomeIcon icon={faCircle} />
           </a>
           <a href="">
-            <FontAwesomeIcon icon={faCircle} />
+            <FontAwesomeIcon icon={faAtlas} />
           </a>
           <a href="">
             <FontAwesomeIcon icon={faCircle} />

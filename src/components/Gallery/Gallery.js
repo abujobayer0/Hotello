@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-
+import "./ImagesJS/font.css";
 import "./styles.css";
 
 // import required modules
@@ -81,7 +81,9 @@ const Gallery = () => {
             </SwiperSlide>
           </Swiper>
           <div className="w-full relative max-h-full">
-            <h1 className="text-2xl">GALLERY</h1>
+            <h1 className="h-fit text-transparent  text-6xl  bg-clip-text bg-gradient-to-r from-pink-500 to-yellow-500 text-center  py-8 font">
+              Gallery
+            </h1>
 
             <ImagesJs></ImagesJs>
           </div>

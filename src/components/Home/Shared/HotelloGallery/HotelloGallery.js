@@ -1,10 +1,5 @@
 import { faWindowMaximize } from "@fortawesome/free-regular-svg-icons";
-import {
-  faWind,
-  faWindowClose,
-  faWindowMinimize,
-  faWindowRestore,
-} from "@fortawesome/free-solid-svg-icons";
+import { faWind } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { lazy } from "react";
 import ReactImageGallery from "react-image-gallery";

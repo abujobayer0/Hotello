@@ -12,6 +12,11 @@ const Images = () => {
   useEffect(() => {
     fetchPopular();
   }, []);
+  const onFullScreen = (e) => {
+    if (e.requestFullscreen) {
+      e.requestFullscreen();
+    }
+  };
 
   return (
     <div>
@@ -19,7 +24,15 @@ const Images = () => {
         <motion.div className="flex w-full relative  flex-wrap py-12 px-6 justify-center items-center gap-8">
           <AnimatePresence>
             {filtered.map((room) => (
-              <Image key={room.id} img={room.image}></Image>
+              <Image
+                handler={onFullScreen}
+                room={room}
+                key={room.id}
+                name={room.name}
+                detail={room.description}
+                price={room.price}
+                img={room.image}
+              ></Image>
             ))}
           </AnimatePresence>
         </motion.div>
