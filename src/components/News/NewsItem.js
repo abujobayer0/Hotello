@@ -3,7 +3,7 @@ import React from "react";
 const NewsItem = ({ img, name, detail }) => {
   return (
     <div>
-      <div className="card p-2 lg:card-side delay-75 ease-in-out transition-shadow bg-base-100 hover:shadow-lg">
+      <div className="card p-2 lg:card-side glass delay-75 ease-in-out transition-shadow bg-base-100 hover:shadow-lg">
         <figure>
           <img src={img} className=" w-full" alt="Album" />
         </figure>

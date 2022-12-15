@@ -7,7 +7,7 @@ import imageFour from ".././../../images/Caousel/pexels-kendall-hoopes-635041.jp
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-8 h-fit bg-stone-900 glass hover:bg-stone-900 text-gray-400 w-full ">
+      <footer className="footer relative p-8 h-fit bg-stone-900 glass hover:bg-stone-900 text-gray-400 w-full ">
         <div>
           <img className="w-52" src={mainLogo} alt="" />
           <p>

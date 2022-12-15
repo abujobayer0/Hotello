@@ -8,6 +8,7 @@ import ScrollProgress from "./components/Home/Shared/ScrollProgress/ScrollProgre
 import Rooms from "./components/Rooms/Rooms";
 import Services from "./components/Services/Services";
 import News from "./components/News/News";
+import Gallery from "./components/Gallery/Gallery";
 function App() {
   return (
     <div className="App">
@@ -21,6 +22,7 @@ function App() {
         <Route path="/rooms" element={<Rooms></Rooms>}></Route>
         <Route path="/services" element={<Services></Services>}></Route>
         <Route path="/news" element={<News></News>}></Route>
+        <Route path="/gallery" element={<Gallery></Gallery>}></Route>
         <Route path="*" element={<Error></Error>}></Route>
       </Routes>
     </div>
