@@ -12,7 +12,7 @@ const SmallRoom = ({ room }) => {
         />
       </div>
       <div>
-        <h1 className="text-lg  font-bold  text-slate-600">{name}</h1>
+        <h1 className="text-lg  font-bold  text-gray-500">{name}</h1>
         <p className="text-sm">${price}</p>
       </div>
     </div>

@@ -8,7 +8,7 @@ const ServiceItem = ({ name, img, detail, price }) => {
           <img
             src={img}
             className=" hover:scale-150 scale-110 ease-in-out duration-500"
-            alt="Shoes"
+            alt=""
           />
         </figure>
         <div className="card-body">

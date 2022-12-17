@@ -63,6 +63,7 @@ const About = () => {
           />
         </h1>
       </div>
+
       <div className="bg-gray-100">
         <div className="flex p-8 h-fit  lg:h-80 md:h-fit flex-wrap justify-center gap-12 items-center">
           <h1 className="text-4xl">

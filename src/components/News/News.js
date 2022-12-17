@@ -45,15 +45,24 @@ const News = () => {
       </div>
       <div className="flex w-full h-fit justify-center">
         <div className="w-full relative h-fit justify-center md:gap-0 gap-12 py-10 bg-gray-100 flex flex-wrap md:flex-nowrap lg:flex-nowrap ">
-          <div className="  px-4  gap-4 flex flex-col">
-            {news.map((newsUpdate) => (
-              <NewsItem
-                name={newsUpdate.name}
-                detail={newsUpdate.detail}
-                img={newsUpdate.img}
-              ></NewsItem>
-            ))}
-          </div>
+          {news.length === 7 ? (
+            <div className="  px-4  gap-4 flex flex-col">
+              {news.map((newsUpdate) => (
+                <NewsItem
+                  name={newsUpdate.name}
+                  detail={newsUpdate.detail}
+                  img={newsUpdate.img}
+                ></NewsItem>
+              ))}
+            </div>
+          ) : (
+            <div className="w-full py-48  flex gap-12 justify-center items-center bg-gray-100 h-96">
+              <div
+                className="radial-progress glass   animate-spin"
+                style={{ "--value": 50 }}
+              ></div>
+            </div>
+          )}
           <div className="w-full px-8">
             <div className="form-control ">
               <div className="input-group ">
@@ -142,7 +151,7 @@ const News = () => {
               </div>
             </div>
             <div className="p-4">
-              <h1 className="text-2xl  font-semibold text-slate-600">ROOM</h1>
+              <h1 className="text-2xl  font-semibold text-gray-500">ROOM</h1>
               <div className="">
                 {smallRooms.map((room) => (
                   <SmallRoom room={room}> </SmallRoom>
