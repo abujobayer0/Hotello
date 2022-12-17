@@ -79,7 +79,9 @@ const About = () => {
             When, while the lovely valley teems with <br /> vapour around me,
             the upper surface of the <br />
             <Link to={"/contact"}>
-              <a className="text-orange-400">impenetrable foliage</a>
+              <a href="" className="text-orange-400 underline">
+                impenetrable foliage
+              </a>
             </Link>
             of my trees, and but a <br /> few stray gleams steal into the inner{" "}
             <br /> sanctuar.
@@ -102,7 +104,7 @@ const About = () => {
               src="https://images.unsplash.com/photo-1559081623-8ce23ec117d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
               alt=""
             />
-            <div className="w-full  top-0 px-4 h-full bg-opacity-50 text-white bg-stone-800 absolute flex flex-col justify-center items-center">
+            <div className="w-full  top-0 px-4 h-full bg-opacity-50  hover:bg-opacity-75 ease-in-out transition-all   text-white bg-stone-800 absolute flex flex-col justify-center items-center">
               <h1>
                 <FontAwesomeIcon className="text-5xl p-2" icon={faBurger} />
               </h1>

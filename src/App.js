@@ -10,11 +10,11 @@ import Services from "./components/Services/Services";
 import News from "./components/News/News";
 import Gallery from "./components/Gallery/Gallery";
 import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
 function App() {
   return (
     <div className="App">
       <ScrollProgress></ScrollProgress>
-
       <Header></Header>
       <NavBar></NavBar>
       <Routes>
@@ -25,6 +25,7 @@ function App() {
         <Route path="/news" element={<News></News>}></Route>
         <Route path="/gallery" element={<Gallery></Gallery>}></Route>
         <Route path="/about" element={<About></About>}></Route>
+        <Route path="/contact" element={<Contact></Contact>}></Route>
         <Route path="*" element={<Error></Error>}></Route>
       </Routes>
     </div>

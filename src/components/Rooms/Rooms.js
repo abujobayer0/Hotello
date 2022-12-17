@@ -126,9 +126,9 @@ const Rooms = () => {
                 typewriter
                   .typeString("Our Rooms Book Now ")
                   .pauseFor(1000)
-
                   .deleteAll()
                   .typeString("Book Your Favourate Room")
+
                   .start();
               }}
             />
