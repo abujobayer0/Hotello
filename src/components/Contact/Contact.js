@@ -83,7 +83,7 @@ const Contact = () => {
             </div>
 
             <div className="text-center  ">
-              <div className="flex flex-wrap m-2 gap-4  justify-center items-center ">
+              <div className="flex flex-wrap m-2 gap-2  justify-center items-center ">
                 <input
                   type="text"
                   placeholder="Type here"
@@ -97,7 +97,7 @@ const Contact = () => {
               </div>
               <div className="flex flex-col justify-center  items-center ">
                 <textarea
-                  className="textarea mb-2 lg:mt-2 lg:w-96 w-80 md:mb-4  focus:textarea-warning  text-sm placeholder-gray-400  bg-[#f5f5f5] rounded-none textarea-bordered"
+                  className="textarea mb-2  lg:w-96 w-80   focus:textarea-warning  text-sm placeholder-gray-400  bg-[#f5f5f5] rounded-none textarea-bordered"
                   placeholder="Bio"
                 ></textarea>
                 <button className="btn gap-2 hover:bg-stone-700 hover:text-white  border-none btn-warning ">
