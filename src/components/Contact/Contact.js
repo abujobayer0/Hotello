@@ -1,3 +1,9 @@
+import {
+  faArrowDownZA,
+  faArrowTurnRight,
+  faFeed,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import TypewriterComponent from "typewriter-effect";
 import Footer from "../Home/Shared/Footer/Footer";
@@ -22,7 +28,7 @@ const Contact = () => {
           </h1>
         </div>
         {/* --------- */}
-        <div className="bg-white w-full px-2 justify-start md:justify-start lg:justify-center  gap-12  md:gap-12 lg:gap-16 flex-wrap py-8 flex min-h-fit">
+        <div className="bg-white w-full px-2 justify-start items-center md:justify-start lg:justify-center  gap-12  md:gap-12 lg:gap-16 flex-wrap py-8 flex min-h-fit">
           <div className="text-center">
             <h1
               className="
@@ -67,6 +73,36 @@ const Contact = () => {
                   CHEF
                 </p>{" "}
                 <p className="text-orange-400">(33)745 128 9715</p>
+              </div>
+            </div>
+          </div>
+          <div className="w-full  bg-transparent">
+            <div className="text-4xl  text-[#3a3534] text-center py-8">
+              <FontAwesomeIcon icon={faFeed} />
+              <h1>Feedback Form</h1>
+            </div>
+
+            <div className="text-center  ">
+              <div className="flex flex-wrap m-4 gap-4  justify-center items-center ">
+                <input
+                  type="text"
+                  placeholder="Type here"
+                  className="input   bg-[#f5f5f5] focus:input-warning input-bordered rounded-none placeholder-gray-400 text-sm w-full max-w-xs"
+                />
+                <input
+                  type="text"
+                  placeholder="Type here"
+                  className="input  text-sm  bg-[#f5f5f5] focus:input-warning placeholder-gray-400 input-bordered w-full rounded-none max-w-xs"
+                />
+              </div>
+              <div className="flex flex-col justify-center items-center ">
+                <textarea
+                  className="textarea m-4 w-96 focus:textarea-warning  text-sm placeholder-gray-400  bg-[#f5f5f5] rounded-none textarea-bordered"
+                  placeholder="Bio"
+                ></textarea>
+                <button className="btn gap-2 hover:bg-stone-700 hover:text-white  border-none btn-warning ">
+                  Send Massage <FontAwesomeIcon icon={faArrowTurnRight} />
+                </button>
               </div>
             </div>
           </div>
