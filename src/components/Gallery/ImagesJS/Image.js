@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./font.css";
+import { Link } from "react-router-dom";
 const Image = ({ img, name, room, handler, detail, price }) => {
   return (
     <motion.div
@@ -22,6 +23,13 @@ const Image = ({ img, name, room, handler, detail, price }) => {
             <h1>{name}</h1>
             <p>{detail}...</p>
             <p>${price}</p>
+            <Link
+              to={`/rooms/${room.id}`}
+              className="btn glass gap-2 w-48 bg-orange-600 hover:bg-orange-600 mt-2"
+            >
+              {" "}
+              GO
+            </Link>
           </div>
         </div>
       </div>
