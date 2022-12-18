@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import TypewriterComponent from "typewriter-effect";
 import Footer from "../Home/Shared/Footer/Footer";
+
 import ServiceItem from "./ServiceItem";
 const Services = () => {
   const [items, setItem] = useState([]);

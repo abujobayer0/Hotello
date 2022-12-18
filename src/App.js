@@ -11,6 +11,7 @@ import News from "./components/News/News";
 import Gallery from "./components/Gallery/Gallery";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
+import RoomDetail from "./components/Rooms/RoomDetail";
 function App() {
   return (
     <div className="App">
@@ -21,6 +22,10 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/rooms" element={<Rooms></Rooms>}></Route>
+        <Route
+          path="/rooms/:roomsId"
+          element={<RoomDetail></RoomDetail>}
+        ></Route>
         <Route path="/services" element={<Services></Services>}></Route>
         <Route path="/news" element={<News></News>}></Route>
         <Route path="/gallery" element={<Gallery></Gallery>}></Route>

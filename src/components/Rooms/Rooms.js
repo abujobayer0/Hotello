@@ -1,19 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import "./Rooms.css";
 import Selection from "./Selection";
 import SingleRoom from "./SingleRoom";
 import Footer from ".././Home/Shared/Footer/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  faBaby,
-  faBed,
-  faFilter,
-  faMoneyBill1Wave,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
+import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import TypewriterComponent from "typewriter-effect";
 
+export const RoomData = createContext([]);
 const Rooms = () => {
   const [studio, setStudio] = useState([]);
   const [modal, setModal] = useState([]);
@@ -32,10 +27,9 @@ const Rooms = () => {
     fetchPopular();
   }, []);
   const handleClick = (e) => {
-    console.log(e);
     setModal(e);
   };
-  console.log(popular.length);
+
   const searchHandleRoom = (e) => {
     if (e === 0) {
       setPopular(filtered);
@@ -160,16 +154,15 @@ const Rooms = () => {
                 <AnimatePresence>
                   {popular.map((room) => (
                     <SingleRoom
+                      key={room.id}
                       event={handleClick}
                       price={room.price}
                       bed={room.bed}
                       room={room}
-                      htmlFor="my-modal-6"
                       childern={room.childern}
                       guest={room.guest}
                       name={room.name}
                       description={room.description}
-                      key={room.id}
                       img={room.image}
                     ></SingleRoom>
                   ))}
@@ -240,56 +233,7 @@ const Rooms = () => {
         </div>
         <Footer></Footer>
       </div>
-      <label htmlFor="my-modal-6"></label>
-      <input type="checkbox" id="my-modal-6" className="modal-toggle" />
-      <div className="modal w-full modalBackground modal-bottom sm:modal-middle">
-        <div className="modal-box bg-stone-600 hover:bg-stone-600 glass">
-          <label
-            htmlFor="my-modal-6"
-            className="btn btn-sm btn-circle glass absolute right-2 top-2"
-          >
-            ✕
-          </label>
-          <div className="flex  justify-around flex-col items-center py-8">
-            <div className="w-full flex flex-col justify-center items-center">
-              <img src={modal.image} className=" rounded-lg w-full" alt="" />
-              <h3 className="p-4 text-gray-300   font-lg  text-3xl">
-                {modal.name}
-              </h3>
-            </div>
-            <div className="flex flex-col justify-start items-start text-gray-300">
-              <p>
-                BED : <span className=" p-2  "> {modal.bed}</span>{" "}
-                <FontAwesomeIcon icon={faBed} />
-              </p>
-              <p>
-                {" "}
-                PRICE : <span className="p-2  "> ${modal.price}</span>{" "}
-                <FontAwesomeIcon icon={faMoneyBill1Wave} />
-              </p>
-              <p>
-                <FontAwesomeIcon icon={faUser} /> USER :{" "}
-                <span className=" p-2  ">{modal.guest} </span> member
-              </p>
-              <p>
-                {" "}
-                <FontAwesomeIcon icon={faBaby} /> CHILDERN :{" "}
-                <span className=" p-2  "> {modal.childern}</span>
-                child
-              </p>
-              <p className="text-gray-300 pt-4"> {modal.description}...</p>
-            </div>
-          </div>
-          <div className="modal-action">
-            <label
-              htmlFor="my-modal-6"
-              className="btn glass bg-stone-800 hover:bg-stone-800"
-            >
-              Check Out
-            </label>
-          </div>
-        </div>
-      </div>
+      <RoomData.Provider value={[popular]}></RoomData.Provider>
     </div>
   );
 };

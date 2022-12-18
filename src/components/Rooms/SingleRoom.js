@@ -71,13 +71,12 @@ const SingleRoom = ({
             </p>
           </div>
           <div className="py-2">
-            <label
-              htmlFor={htmlFor}
-              onClick={() => event(room)}
+            <Link
+              to={`/rooms/${room.id}`}
               className="btn glass gap-2 w-48 bg-stone-800 hover:bg-stone-800"
             >
               Book Now <FontAwesomeIcon icon={faArrowRight} />
-            </label>
+            </Link>
           </div>
         </div>
       </div>
