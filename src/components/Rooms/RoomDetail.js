@@ -1,8 +1,26 @@
-import { faCartArrowDown, faReceipt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCartArrowDown,
+  faConciergeBell,
+  faFan,
+  faHardDrive,
+  faKey,
+  faMugHot,
+  faQuoteLeft,
+  faQuoteRight,
+  faReceipt,
+  faShower,
+  faSliders,
+  faSmoking,
+  faTelevision,
+  faTrash,
+  faWifi,
+  faWineGlass,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useParams } from "react-router-dom";
 import TypewriterComponent from "typewriter-effect";
+
 import Footer from "../Home/Shared/Footer/Footer";
 
 import productsData from "./productsData";
@@ -37,7 +55,7 @@ const RoomDetail = () => {
               className=" text-5xl text-orange-400"
               icon={faReceipt}
             />
-            <h1 className="pt-2">{thisRoom.name}</h1>
+            <h1 className="pt-2 text-stone-600">{thisRoom.name}</h1>
           </div>
           <div className="flex lg:p-10 md:p-8 md:flex-row flex-col p-4 lg:flex-row">
             <div>
@@ -65,7 +83,64 @@ const RoomDetail = () => {
               </button>
             </div>
           </div>
+          <div>
+            <h1 className="text-center text-orange-400  text-4xl  ">
+              <FontAwesomeIcon icon={faQuoteLeft} /> Facilities{" "}
+              <FontAwesomeIcon icon={faQuoteRight} />
+            </h1>
+            <div className="w-full flex pb-8  flex-wrap justify-center  relative text-2xl  gap-2 pt-8  p-4">
+              <div className="text-5xl  hover:glass hover:text-orange-400 ease-in-out transition-all border-r-2 w-36 shadow-md bg-white  p-4 text-stone-600 flex flex-col justify-center items-center gap-2">
+                <FontAwesomeIcon icon={faFan} />
+                <h1 className="text-[12px]">AIR CONDITIONAL</h1>
+              </div>
+              <div className="text-5xl  hover:glass hover:text-orange-400 transition-all ease-in-out  border-r-2 w-36 shadow-md bg-white  p-4 text-stone-600 flex flex-col justify-center items-center gap-2">
+                <FontAwesomeIcon icon={faTelevision} />
+                <h1 className="text-[12px]">TELEVISION</h1>
+              </div>
+              <div className="text-5xl  hover:glass hover:text-orange-400 transition-all ease-in-out  border-r-2 w-36 shadow-md bg-white  p-4 text-stone-600 flex flex-col justify-center items-center gap-2">
+                <FontAwesomeIcon icon={faTrash} />
+                <h1 className="text-[12px]">CLEANING</h1>
+              </div>
+              <div className="text-5xl  hover:glass hover:text-orange-400 transition-all ease-in-out  border-r-2 w-36 shadow-md bg-white  p-4 text-stone-600 flex flex-col justify-center items-center gap-2">
+                <FontAwesomeIcon icon={faConciergeBell} />
+                <h1 className="text-[12px]">CONCIERGE</h1>
+              </div>
+              <div className="text-5xl  hover:glass hover:text-orange-400 transition-all ease-in-out  border-r-2 w-36 shadow-md bg-white  p-4 text-stone-600 flex flex-col justify-center items-center gap-2">
+                <FontAwesomeIcon icon={faSliders} />
+                <h1 className="text-[12px]">FREE SLIPPERS</h1>
+              </div>
+              <div className="text-5xl  hover:glass hover:text-orange-400 transition-all ease-in-out  border-r-2 w-36 shadow-md bg-white  p-4 text-stone-600 flex flex-col justify-center items-center gap-2">
+                <FontAwesomeIcon icon={faWifi} />
+                <h1 className="text-[12px]">FREE WIFI</h1>
+              </div>
+              <div className="text-5xl  hover:glass hover:text-orange-400 transition-all ease-in-out  border-r-2 w-36 shadow-md bg-white  p-4 text-stone-600 flex flex-col justify-center items-center gap-2">
+                <FontAwesomeIcon icon={faMugHot} />
+                <h1 className="text-[12px]">GYM ACCESS</h1>
+              </div>
+              <div className="text-5xl  hover:glass hover:text-orange-400 transition-all ease-in-out  border-r-2 w-36 shadow-md bg-white  p-4 text-stone-600 flex flex-col justify-center items-center gap-2">
+                <FontAwesomeIcon icon={faHardDrive} />
+                <h1 className="text-[12px]">HAIR DRYER</h1>
+              </div>
+              <div className="text-5xl  hover:glass hover:text-orange-400 transition-all ease-in-out  border-r-2 w-36 shadow-md bg-white  p-4 text-stone-600 flex flex-col justify-center items-center gap-2">
+                <FontAwesomeIcon icon={faKey} />
+                <h1 className="text-[12px]">KEYDOOR</h1>
+              </div>
+              <div className="text-5xl  hover:glass hover:text-orange-400 transition-all ease-in-out  border-r-2 w-36 shadow-md bg-white  p-4 text-stone-600 flex flex-col justify-center items-center gap-2">
+                <FontAwesomeIcon icon={faWineGlass} />
+                <h1 className="text-[12px]">MIN BAR</h1>
+              </div>
+              <div className="text-5xl  hover:glass hover:text-orange-400 transition-all ease-in-out  border-r-2 w-36 shadow-md bg-white  p-4 text-stone-600 flex flex-col justify-center items-center gap-2">
+                <FontAwesomeIcon icon={faShower} />
+                <h1 className="text-[12px]">SHOWER</h1>
+              </div>
+              <div className="text-5xl  hover:glass hover:text-orange-400 transition-all ease-in-out  border-r-2 w-36 shadow-md bg-white  p-4 text-stone-600 flex flex-col justify-center items-center gap-2">
+                <FontAwesomeIcon icon={faSmoking} />
+                <h1 className="text-[12px]">SMOKING</h1>
+              </div>
+            </div>
+          </div>
         </div>
+
         <Footer></Footer>
       </div>
     </div>
