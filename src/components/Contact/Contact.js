@@ -2,12 +2,14 @@ import {
   faArrowDownZA,
   faArrowTurnRight,
   faFeed,
+  faQuoteLeft,
+  faQuoteRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import TypewriterComponent from "typewriter-effect";
 import Footer from "../Home/Shared/Footer/Footer";
-
+import zubayer from "./WhatsApp Image 2022-12-19 at 4.54.35 AM.jpeg";
 const Contact = () => {
   return (
     <div>
@@ -32,14 +34,16 @@ const Contact = () => {
           <div className="text-center">
             <h1
               className="
-            uppercase text-[22px]  text-[#3a3534]"
+            uppercase text-[22px] p-4  text-orange-400"
             >
               we work on the forefront
             </h1>
             <p className="text-[20px] text-[rgba(34,34,34,.7)]">
-              To learn more about our service offerings and industry expertise
-              or to have an <br /> Consulting professional contact you directly,
-              please fill out the form below or <br /> submit an email.
+              <FontAwesomeIcon icon={faQuoteLeft} /> To learn more about our
+              service offerings and industry expertise or to have an <br />{" "}
+              Consulting professional contact you directly, please fill out the
+              form below or <br /> submit an email.
+              <FontAwesomeIcon icon={faQuoteRight} />
             </p>
           </div>
 
@@ -73,6 +77,19 @@ const Contact = () => {
                   CHEF
                 </p>{" "}
                 <p className="text-orange-400">(33)745 128 9715</p>
+              </div>
+            </div>
+            <div className="flex m-8 gap-8">
+              <img className="rounded-full w-16" src={zubayer} alt="" />{" "}
+              <div>
+                <h1 className="text-[20px] text-[#3a3534]">Zubayer Munna </h1>{" "}
+                <p
+                  className="
+                text-[12px] text-[rgba(34,34,34,.7)]"
+                >
+                  MERN DEVELOPER
+                </p>{" "}
+                <p className="text-orange-400">+880 1761 777 661</p>
               </div>
             </div>
           </div>
