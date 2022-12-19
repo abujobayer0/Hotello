@@ -8,7 +8,7 @@ const News = () => {
   const [smallRooms, setSmallRooms] = useState([]);
 
   useEffect(() => {
-    fetch("deluxe.json")
+    fetch("rooms.json")
       .then((res) => res.json())
       .then((data) => setSmallRooms(data));
   }, []);
