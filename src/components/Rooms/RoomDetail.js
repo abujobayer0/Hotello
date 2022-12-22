@@ -18,16 +18,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import TypewriterComponent from "typewriter-effect";
-
 import Footer from "../Home/Shared/Footer/Footer";
 
 import productsData from "./productsData";
 const RoomDetail = () => {
   const { roomsId } = useParams();
   const id = parseInt(roomsId);
-
   const thisRoom = productsData.find((room) => room.id === id);
   console.log(thisRoom);
   return (
@@ -77,10 +75,16 @@ const RoomDetail = () => {
                   {" "}
                   <span>Bed:</span> {thisRoom.bed}
                 </p>
+                <p className="w-full border-b-2 text-md flex justify-between h-12 px-4 items-center">
+                  {" "}
+                  <span>Price per night: </span>$ {thisRoom.price}
+                </p>
               </div>
-              <button className="btn glass  gap-2 w-48 bg-stone-800 hover:bg-stone-800">
-                Checkout Now <FontAwesomeIcon icon={faCartArrowDown} />
-              </button>
+              <Link to={`/checkout/${thisRoom.id}`}>
+                <button className="btn glass  gap-2 w-48 bg-stone-800 hover:bg-stone-800">
+                  Checkout Now <FontAwesomeIcon icon={faCartArrowDown} />
+                </button>
+              </Link>
             </div>
           </div>
           <div>

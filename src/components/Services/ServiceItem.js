@@ -1,16 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const ServiceItem = ({ name, img, detail, price }) => {
+const ServiceItem = ({ name, service, img, detail, price }) => {
+  console.log(service);
   return (
     <div>
       <div className="card w-80 bg-base-100 shadow-xl">
-        <figure className="overflow-hidden">
-          <img
-            src={img}
-            className=" hover:scale-150 scale-110 ease-in-out duration-500"
-            alt=""
-          />
-        </figure>
+        <Link to={`/services/${service.id}`}>
+          <figure className="overflow-hidden">
+            <img
+              src={img}
+              className=" hover:scale-150 scale-110 ease-in-out duration-500"
+              alt=""
+            />
+          </figure>
+        </Link>
         <div className="card-body">
           <h2 className="card-title">
             {name}

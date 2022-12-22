@@ -1,5 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import "react-date-range/dist/theme/default.css"; // theme css file
+import "react-date-range/dist/styles.css"; // main css file
 import Home from "./components/Home/Home";
 import Header from "./components/Home/Shared/Header/Header";
 import NavBar from "./components/Home/Shared/NavBar/NavBar";
@@ -12,6 +14,9 @@ import Gallery from "./components/Gallery/Gallery";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import RoomDetail from "./components/Rooms/RoomDetail";
+import NewsDetail from "./components/News/NewsDetail";
+import ServicesDetail from "./components/Services/ServicesDetail";
+import CheckOutPage from "./components/CheckOutPage/CheckOutPage";
 function App() {
   return (
     <div className="App">
@@ -26,8 +31,17 @@ function App() {
           path="/rooms/:roomsId"
           element={<RoomDetail></RoomDetail>}
         ></Route>
+        <Route path="/news/:newsId" element={<NewsDetail></NewsDetail>}></Route>
         <Route path="/services" element={<Services></Services>}></Route>
+        <Route
+          path="/services/:serviceId"
+          element={<ServicesDetail></ServicesDetail>}
+        ></Route>
         <Route path="/news" element={<News></News>}></Route>
+        <Route
+          path="/checkout/:checkoutId"
+          element={<CheckOutPage></CheckOutPage>}
+        ></Route>
         <Route path="/gallery" element={<Gallery></Gallery>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/contact" element={<Contact></Contact>}></Route>

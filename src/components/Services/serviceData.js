@@ -1,0 +1,44 @@
+export default [
+  {
+    name: "Food and Beverage",
+    detail: "All the guests can celebrate a special occasion or just s...",
+    img: "https://images.pexels.com/photos/5898838/pexels-photo-5898838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    price: 12,
+    id: 1,
+  },
+  {
+    name: "Free Transfer",
+    detail: "Didn’t manage to book good transportation? We can help! W...",
+    img: "https://images.pexels.com/photos/5120082/pexels-photo-5120082.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    price: "free",
+    id: 2,
+  },
+  {
+    name: "Spa & Fitness",
+    detail: "As a guest,you can enjoy our Spa facilities to relax aft...",
+    img: "https://images.pexels.com/photos/5473177/pexels-photo-5473177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    price: 30,
+    id: 3,
+  },
+  {
+    name: "Exclusive Offers",
+    detail: "We offer additional room services. That could be birthday...",
+    img: "https://images.pexels.com/photos/6466212/pexels-photo-6466212.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    price: 10,
+    id: 4,
+  },
+  {
+    name: "Safe & Secure",
+    detail: "Keep your belongings safe! Use our storage services and k...",
+    img: "https://images.pexels.com/photos/279810/pexels-photo-279810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    price: 5,
+    id: 5,
+  },
+  {
+    name: "Laundry Service",
+    detail: "We provide all laundry services in our Hotel. Be sure tha...",
+    img: "https://images.pexels.com/photos/8774524/pexels-photo-8774524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    price: 5,
+    id: 6,
+  },
+];

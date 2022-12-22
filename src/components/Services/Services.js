@@ -37,6 +37,7 @@ const Services = () => {
             <ServiceItem
               key={item.id}
               name={item.name}
+              service={item}
               img={item.img}
               price={item.price}
               detail={item.detail}
