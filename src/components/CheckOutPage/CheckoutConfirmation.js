@@ -9,7 +9,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import logo from ".././images/Logo/logo.png";
-import ReactToPdf from "react-to-pdf";
+
 const CheckoutConfirmation = ({
   startDate,
   firstName,
@@ -22,16 +22,10 @@ const CheckoutConfirmation = ({
   textArea,
 }) => {
   const stylep = { fontFamily: " 'Questrial', sans-serif" };
-  const options = {
-    orientation: "portrait",
-    unit: "in",
-    format: [9, 9],
-  };
-  const ref = React.createRef();
 
   return (
     <div className="w-full">
-      <div ref={ref} className=" w-10/12 mx-auto mt-12 bg-stone-400 ">
+      <div className=" w-10/12 mx-auto mt-12 bg-stone-400 ">
         <div className="flex flex-col  justify-center p-4 items-center w-full">
           <img className="w-52 p-4" src={logo} alt="" />
           <div className="flex border-b-4 pb-4 lg:gap-4 gap-2  flex-wrap lg:flex-nowrap justify-center items-center lg:justify-around mb-4  text-white">
@@ -172,25 +166,12 @@ const CheckoutConfirmation = ({
           <span>Your Booking has been confirmed!</span>
         </div>
       </div>
-      <ReactToPdf
-        targetRef={ref}
-        filename="div-blue.pdf"
-        options={options}
-        x={0.5}
-        y={0.5}
-        scale={0.8}
-      >
-        {({ toPdf }) => (
-          <div className="w-full flex justify-center">
-            <button
-              className="btn mb-12 bg-orange-400 border-none mx-auto"
-              onClick={toPdf}
-            >
-              Save
-            </button>
-          </div>
-        )}
-      </ReactToPdf>
+
+      <div className="w-full flex justify-center">
+        <button className="btn mb-12 bg-orange-400 border-none mx-auto">
+          Save
+        </button>
+      </div>
     </div>
   );
 };
