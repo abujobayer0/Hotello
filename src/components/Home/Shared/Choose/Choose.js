@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 const Choose = () => {
   return (
-    <div className="flex  justify-center flex-wrap">
+    <div className="flex relative justify-center flex-wrap">
       <div className="w-36 h-60 flex flex-col lg:mx-28 mx-4 justify-center items-center relative">
         <div className="w-36 h-36 bg-gray-200 transition-all ease-in-out   text-5xl hover:text-orange-400 hover:w-44 hover:h-44  flex  drop-shadow-2xl justify-center items-center text-stone-700 rounded-full">
           <FontAwesomeIcon icon={faWifi} />
