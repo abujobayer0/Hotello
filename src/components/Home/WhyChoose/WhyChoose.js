@@ -5,7 +5,7 @@ import Choose from "../Shared/Choose/Choose";
 
 const WhyChoose = () => {
   return (
-    <div className="w-full pb-20 bg-gray-200">
+    <div className="w-full pb-20  bg-gray-200">
       <div className="pb-8">
         <h1 className="text-4xl text-center pt-8 text-stone-700">
           <FontAwesomeIcon icon={faHashtag} />

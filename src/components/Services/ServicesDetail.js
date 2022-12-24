@@ -11,7 +11,7 @@ const ServicesDetail = () => {
   const id = parseInt(serviceId);
   const thisService = serviceData.find((service) => service.id === id);
   return (
-    <div>
+    <div className="relative">
       <div className="bgRoom w-full relative">
         <div className="w-full flex h-80 justify-center pt-12 lg:pt-20 md:pt-20 items-center ">
           <h1 className="text-4xl px-12 text-center text-white font-semibold">
@@ -32,8 +32,8 @@ const ServicesDetail = () => {
           <div className="w-full px-8 py-2 md:w-1/2 lg:w-1/2">
             <img className="w-full" src={thisService.img} alt="" />
           </div>
-          <div className="lg:w-1/2 TF md:w-1/2 w-full flex flex-col py-4 px-8">
-            <p className="text-2xl lg:text-3xl">
+          <div className="lg:w-1/2 TF h-max md:w-1/2 w-full flex flex-col py-4 px-8">
+            <p className="text-2xl  lg:text-3xl">
               A wonderful serenity has taken <br /> possession of my entire soul
             </p>
             <p className="text-md lg:text-lg py-4">
@@ -62,9 +62,11 @@ const ServicesDetail = () => {
             </p>
           </div>
         </div>
+        <div className="w-full h-fit  relative z-10 bottom-0 left-0">
+          <WhyChoose></WhyChoose>
+        </div>
+        <Footer></Footer>
       </div>
-      <WhyChoose></WhyChoose>
-      <Footer></Footer>
     </div>
   );
 };
