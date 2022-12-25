@@ -120,6 +120,9 @@ const Contact = () => {
                 <button className="btn gap-2 hover:bg-stone-700 hover:text-white  border-none btn-warning ">
                   Send Massage <FontAwesomeIcon icon={faArrowTurnRight} />
                 </button>
+                <a href="mailto:email@example.com?subject='Hello from Abstract!'&body='Just popped in to say hello'">
+                  Click to Send an Email
+                </a>
               </div>
             </div>
           </div>

@@ -3,7 +3,7 @@ import React from "react";
 const Popup = () => {
   return (
     <div>
-      <div className="alert w-1/2 m-4 absolute bottom-0 alert-warning shadow-lg">
+      <div className="alert  w-1/3 m-4 absolute bottom-0 left-0 alert-warning shadow-lg">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"

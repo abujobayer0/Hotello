@@ -1,6 +1,7 @@
 import { faQuoteRight, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { SwiperSlide } from "swiper/react";
 const Uer = ({ name, position, review, img }) => {
   return (
     <div className=" w-full">

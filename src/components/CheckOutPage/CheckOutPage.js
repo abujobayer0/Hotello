@@ -91,7 +91,7 @@ const CheckOutPage = () => {
           </h1>
         </div>
         {print === false ? (
-          <div className="w-full relative h-fit grid lg:grid-cols-2 items-stretch  text-gray-700 rounded-none py-8   bg-gray-100">
+          <div className="w-full lg:place-content-center relative items-center h-fit grid lg:grid-cols-2 lg:place-items-center text-gray-700 rounded-none py-8   bg-gray-100">
             <div>
               {btn === false ? (
                 <div className="card w-96   rounded-none mx-auto  bg-stone-900 hover:bg-stone-900 glass text-gray-300">
@@ -113,9 +113,9 @@ const CheckOutPage = () => {
                   </div>
                 </div>
               ) : (
-                <div className="lg:w-full  flex mx-auto flex-col">
+                <div className="lg:w-full lg:px-12 justify-center items-center flex mx-auto flex-col">
                   <button
-                    className="btn bg-orange-400 justify-center hover:bg-stone-800 border-none glass flex items-center gap-2 "
+                    className="btn  bg-orange-400 justify-center hover:bg-stone-800 border-none glass flex items-center gap-2 "
                     onClick={handleClose}
                   >
                     close <FontAwesomeIcon icon={faXmarkCircle} />
