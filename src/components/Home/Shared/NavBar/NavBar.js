@@ -4,7 +4,6 @@ import {
   faHome,
   faPhone,
   faPhotoVideo,
-  faRestroom,
   faServer,
   faUserGroup,
 } from "@fortawesome/free-solid-svg-icons";

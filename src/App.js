@@ -17,6 +17,7 @@ import RoomDetail from "./components/Rooms/RoomDetail";
 import NewsDetail from "./components/News/NewsDetail";
 import ServicesDetail from "./components/Services/ServicesDetail";
 import CheckOutPage from "./components/CheckOutPage/CheckOutPage";
+import Login from "./components/Login/Login";
 function App() {
   return (
     <div className="App">
@@ -37,6 +38,7 @@ function App() {
           path="/services/:serviceId"
           element={<ServicesDetail></ServicesDetail>}
         ></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/news" element={<News></News>}></Route>
         <Route
           path="/checkout/:checkoutId"
