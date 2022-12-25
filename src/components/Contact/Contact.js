@@ -139,7 +139,7 @@ const Contact = () => {
                   <a>Fill up the information for send button</a>
                 ) : (
                   <a
-                    href={`mailto:zubayer.munna.dev@gmail.com?subject=${name}'s Feedback!&body=${msg}   ..........Thanks for your feedback!`}
+                    href={`mailto:zubayer.munna.dev@gmail.com?subject=${name}'s Feedback!&body= Hello i'm ${name}  ${msg}  :from${email} :${name}`}
                     className="btn gap-2 hover:bg-stone-700 hover:text-white  border-none btn-warning "
                   >
                     Send Massage
