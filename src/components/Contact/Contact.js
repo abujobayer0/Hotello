@@ -19,6 +19,9 @@ const Contact = () => {
   };
   const handleEmail = (e) => {
     setEmail(e.target.value);
+    const eml = e.target.value;
+    const smeml = eml.toLowerCase();
+    console.log(smeml);
   };
   const handleMassage = (e) => {
     setMsg(e.target.value);
