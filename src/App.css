@@ -10,12 +10,12 @@
   /* Track */
   ::-webkit-scrollbar-track {
     
-    background-color:rgb(105, 105, 105) ;
+    background-color:rgb(238, 238, 238) ;
 
   }
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: orange; 
+    background: #fb923c; 
   
   }

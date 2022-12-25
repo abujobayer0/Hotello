@@ -5,11 +5,12 @@ import {
   faPhone,
   faPhotoVideo,
   faServer,
+  faSignIn,
   faUserGroup,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../../images/Logo/logo.png";
 
 const NavBar = () => {
@@ -39,8 +40,14 @@ const NavBar = () => {
         </NavLink>
       </div>
       <div className="">
-        <div className="justify-between flex-row-reverse navbar text-black bg-orange-400 w-full items-center lg:hidden ">
-          <div className="dropdown dropdown-end ">
+        <div className="justify-between relative flex-row-reverse navbar text-black bg-orange-400 w-full items-center lg:hidden ">
+          {" "}
+          <Link className="absolute right-20 top-[30%]" to={"/login"}>
+            <a className="text-xl text-white" href="">
+              <FontAwesomeIcon icon={faSignIn} />
+            </a>
+          </Link>
+          <div className="dropdown  dropdown-end ">
             <label
               tabIndex={0}
               className="btn btn-ghost  text-white  lg:hidden"
@@ -60,6 +67,7 @@ const NavBar = () => {
                 />
               </svg>
             </label>
+
             <ul
               tabIndex={0}
               className="menu gap-2 menu-compact dropdown-content  mt-3 p-2 shadow bg-base-100 rounded-box w-52"
