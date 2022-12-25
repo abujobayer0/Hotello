@@ -125,7 +125,7 @@ const Contact = () => {
                   required
                   placeholder="Email"
                   onChange={(e) => handleEmail(e)}
-                  className="input  text-sm  bg-[#f5f5f5] focus:input-warning placeholder-gray-400 input-bordered w-full rounded-none max-w-xs"
+                  className="input  text-sm lowercase  bg-[#f5f5f5] focus:input-warning placeholder-gray-400 input-bordered w-full rounded-none max-w-xs"
                 />
               </div>
               <div className="flex flex-col justify-center  items-center ">
@@ -139,7 +139,7 @@ const Contact = () => {
                   <a>Fill up the information for send button</a>
                 ) : (
                   <a
-                    href={`mailto:zubayer.munna.dev@gmail.com?subject=${name}'s Feedback!&body= Hello i'm ${name}  ${msg}  :from${email} :${name}`}
+                    href={`mailto:zubayer.munna.dev@gmail.com?subject=${name}'s Feedback!&body= Hello i'm ${name}  ${msg}  >>>>from:${email}<<<< >>>>name:${name}<<<<`}
                     className="btn gap-2 hover:bg-stone-700 hover:text-white  border-none btn-warning "
                   >
                     Send Massage
