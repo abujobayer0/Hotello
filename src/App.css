@@ -1,6 +1,7 @@
 .app{
     scroll-behavior: smooth;
     transition: all ease 0.5s;
+    background-color:rgb(229, 231, 235) ;
 }/* width */
 ::-webkit-scrollbar {
     width: 10px;

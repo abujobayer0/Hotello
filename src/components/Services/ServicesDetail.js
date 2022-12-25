@@ -6,6 +6,7 @@ import TypewriterComponent from "typewriter-effect";
 import serviceData from "./serviceData";
 import Footer from ".././Home/Shared/Footer/Footer";
 import WhyChoose from ".././Home/WhyChoose/WhyChoose";
+import ServicesImages from "./ServicesImages";
 const ServicesDetail = () => {
   const { serviceId } = useParams();
   const id = parseInt(serviceId);
@@ -62,6 +63,10 @@ const ServicesDetail = () => {
             </p>
           </div>
         </div>
+        <div className="w-full h-fit transition-all relative z-10 bottom-0 left-0">
+          <ServicesImages></ServicesImages>
+        </div>
+
         <div className="w-full h-fit  relative z-10 bottom-0 left-0">
           <WhyChoose></WhyChoose>
         </div>

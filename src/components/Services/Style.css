@@ -1,0 +1,58 @@
+.container {
+    position: relative;
+    width: 100%;
+  
+  }
+  
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    
+    opacity: 0;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transition: all ease 0.8s ;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.middle::before{
+content: "";opacity: .5;
+backdrop-filter: blur(80px);
+background-color: rgb(73, 43, 8);
+width: fit-content; height: 100%;position: absolute; top: 0; left:0; padding: 70%;
+   
+}
+  .container:hover .image {
+    opacity: 0.3;
+
+  }
+  .container:hover .InnerText {
+    opacity: 0;
+  }
+.InnerText
+  {
+    opacity: 1;
+    position: absolute;
+    transition: .5s ease; 
+     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    backface-visibility: hidden;
+  }
+  .container:hover .middle {
+    opacity: 1;
+  }
+  

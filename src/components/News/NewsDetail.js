@@ -18,7 +18,7 @@ const NewsDetail = () => {
 
   return (
     <div>
-      <div className="bgRoom  w-full">
+      <div className="bgRoom TF w-full">
         <div className="w-full flex h-80 justify-center pt-12 lg:pt-20 md:pt-20 items-center ">
           <h1 className="text-4xl px-12 text-center text-white font-semibold">
             {" "}
