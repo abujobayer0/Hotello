@@ -1,16 +1,28 @@
 import {
-  faArrowDownZA,
   faArrowTurnRight,
   faFeed,
   faQuoteLeft,
   faQuoteRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useState } from "react";
 import TypewriterComponent from "typewriter-effect";
 import Footer from "../Home/Shared/Footer/Footer";
+
 import zubayer from "./WhatsApp Image 2022-12-19 at 4.54.35 AM.jpeg";
 const Contact = () => {
+  const [name, setName] = useState([]);
+  const [email, setEmail] = useState([]);
+  const [msg, setMsg] = useState([]);
+  const handleName = (e) => {
+    setName(e.target.value);
+  };
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const handleMassage = (e) => {
+    setMsg(e.target.value);
+  };
   return (
     <div>
       <div className="bgRoom w-full">
@@ -104,25 +116,36 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder="Name"
+                  required
+                  onChange={(e) => handleName(e)}
                   className="input   bg-[#f5f5f5] focus:input-warning input-bordered rounded-none placeholder-gray-400 text-sm w-full max-w-xs"
                 />
                 <input
-                  type="text"
+                  type="email"
+                  required
                   placeholder="Email"
+                  onChange={(e) => handleEmail(e)}
                   className="input  text-sm  bg-[#f5f5f5] focus:input-warning placeholder-gray-400 input-bordered w-full rounded-none max-w-xs"
                 />
               </div>
               <div className="flex flex-col justify-center  items-center ">
                 <textarea
                   className="textarea mb-2  lg:w-96 w-80   focus:textarea-warning  text-sm placeholder-gray-400  bg-[#f5f5f5] rounded-none textarea-bordered"
-                  placeholder="Message"
+                  placeholder="Message ! message should be minimum 25 caracter ."
+                  required
+                  onChange={(e) => handleMassage(e)}
                 ></textarea>
-                <a
-                  href="mailto:`{email}`?subject={subject}&body={body}"
-                  className="btn gap-2 hover:bg-stone-700 hover:text-white  border-none btn-warning "
-                >
-                  Send Massage <FontAwesomeIcon icon={faArrowTurnRight} />
-                </a>
+                {email.length <= 8 && name.length <= 6 && msg.length <= 25 ? (
+                  <a>Fill up the information for send button</a>
+                ) : (
+                  <a
+                    href={`mailto:${email}?subject='${name}'s Feedback!'&body=${msg}  </br> Thanks for your feedback!`}
+                    className="btn gap-2 hover:bg-stone-700 hover:text-white  border-none btn-warning "
+                  >
+                    Send Massage
+                    <FontAwesomeIcon icon={faArrowTurnRight} />
+                  </a>
+                )}
               </div>
             </div>
           </div>
