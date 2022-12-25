@@ -117,11 +117,11 @@ const Contact = () => {
                   className="textarea mb-2  lg:w-96 w-80   focus:textarea-warning  text-sm placeholder-gray-400  bg-[#f5f5f5] rounded-none textarea-bordered"
                   placeholder="Message"
                 ></textarea>
-                <button className="btn gap-2 hover:bg-stone-700 hover:text-white  border-none btn-warning ">
+                <a
+                  href="mailto:`{email}`?subject={subject}&body={body}"
+                  className="btn gap-2 hover:bg-stone-700 hover:text-white  border-none btn-warning "
+                >
                   Send Massage <FontAwesomeIcon icon={faArrowTurnRight} />
-                </button>
-                <a href="mailto:email@example.com?subject='Hello from Abstract!'&body='Just popped in to say hello'">
-                  Click to Send an Email
                 </a>
               </div>
             </div>
