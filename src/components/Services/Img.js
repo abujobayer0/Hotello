@@ -14,9 +14,7 @@ const Img = ({ service, icon, text, img }) => {
         </div>
         <div className="middle flex flex-col text-white   justify-center items-center">
           <div className="z-10 px-4">
-            <h1 className="text-2xl bg-stone-700 hover:bg-stone-700 py-4  glass uppercase px-2">
-              {service}
-            </h1>
+            <h1 className="text-2xl  py-4   uppercase px-2">{service}</h1>
             <div className="text-lg py-2">{text}</div>
           </div>
         </div>

@@ -1,21 +1,20 @@
 import React from "react";
 import app from "./firebase.init";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import UseUser from "../../hooks/UseUser";
-
+import Logo from "../images/Logo/logo.png";
 const auth = getAuth(app);
 const Login = () => {
   const provider = new GoogleAuthProvider();
-  const [user, setUser] = UseUser();
+
   const handleGoogleSignIn = () => {
     signInWithPopup(auth, provider)
-      .then((result) => setUser(result))
+      .then((result) => console.log(result))
       .catch((error) => console.error(error));
   };
 
   return (
-    <div className="bg-orange-100 ">
-      <section className="h-fit bg-orange-100  w-full py-2 lg:h-screen mt-12 lg:mt-0 md:mt-0">
+    <div className="bg-orange-100 h-[100vh] overflow-scroll overflow-x-hidden bgRoom ">
+      <section className="h-[100vh] glass w-full py-2  lg:h-[100vh] mt-12 lg:mt-0 md:mt-0">
         <div className="container  px-6 py-12 h-full">
           <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
             <div className="md:w-8/12 lg:w-6/12 mb-12 md:mb-0">
@@ -59,7 +58,7 @@ const Login = () => {
                   </div>
                   <a
                     href="#!"
-                    className="text-stone-600 hover:text-orange-500 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out"
+                    className="text-white hover:text-orange-300 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out"
                   >
                     Forgot password?
                   </a>
@@ -75,53 +74,30 @@ const Login = () => {
                 </button>
 
                 <div className="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5">
-                  <p className="text-center font-semibold mx-4 mb-0">OR</p>
+                  <p className="text-center text-gray-200 font-semibold mx-4 mb-0">
+                    OR
+                  </p>
                 </div>
 
                 <a
                   onClick={handleGoogleSignIn}
-                  className="px-7  hover:bg-stone-900 bg-stone-800 glass py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
+                  className="px-7 gap-2  hover:bg-stone-900 bg-stone-800 glass py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
                   href="#!"
                   role="button"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 320 512"
-                    className="w-3.5 h-3.5 mr-2"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-                    />
-                  </svg>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAdFJREFUSEvFVW1OwkAQfbOgiZbQNlT/qieQG4A30BMIJxBOIJ5AuYGeQG4gnEC8Af7VJm0V/pCwYxaL2X4sgobQ37PvzZs380rY8Ecbxsf2Cd6Dz7oQosaMKghVAA6IhsxyWJSFruvujZZNwaggCAJnJnZvATSWjpHRK/C06bpumFeXS/AWjKtC0COA49U84q5nl1orEcSdP+eCMw/mIEQ1DezBsy2jyowCP5rcA7jUACIQGl7Z6ukdvkeTDoEdU+eL2gSBMpSEeNLBpeT6oVsarjaqbFWSYN4Vrn/KCBfpztclShD44bivz9ezrewIVY0QbCKSM9nWFScJoona6aP5Y+aB55TqaSA/mhjB58+AmwPb6uR64G+cYNURabJYkEOMU5NvS00mULti798tM9aPxncAXS1qClKc6PHx25qGUvKZaU3ji1dr7cQEr55tJa4/59CSHQEICdSp2PtdXYn/MW6ASWXVAhwgbnrlkjpUbWIp/XFUqMP63qZk8ZCJQjBntosJLwdlS6Vt+k12wrF0FQ0Zkjw/FHhxNq3nJeovcb3T0Q00mP1QkNPWWnGtAyk1JOicgGMmVInhgHnERP2iFPd//uGsmzmm+u3/k/+r5Au06MIZYa9i0AAAAABJRU5ErkJggg==" />
                   Continue with Google
-                </a>
-                <a
-                  className="px-7 py-3 bg-stone-600 hover:bg-stone-700 glass text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center"
-                  href="#!"
-                  role="button"
-                  data-mdb-ripple="true"
-                  data-mdb-ripple-color="light"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 320 512"
-                    className="w-3.5 h-3.5 mr-2"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-                    />
-                  </svg>
-                  Continue with Facebook
                 </a>
               </form>
             </div>
           </div>
         </div>
       </section>
+      <div className="mt-4  flex justify-center items-center w-full h-12 glass">
+        <img className="w-28 " src={Logo} alt="" />
+      </div>
     </div>
   );
 };

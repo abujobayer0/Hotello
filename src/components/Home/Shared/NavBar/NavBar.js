@@ -16,7 +16,7 @@ import logo from "../../../images/Logo/logo.png";
 const NavBar = () => {
   return (
     <div className="  z-10 w-full  justify-center  fixed lg:flex lg:absolute top-0 lg:top-28 text-white font-semibold text-sm items-center">
-      <div className="hidden lg:flex w-fit gap-8 justify-between">
+      <div className="hidden lg:flex w-fit gap-8 text-white justify-between">
         <NavLink className="px-4 py-2" to="/home">
           HOME
         </NavLink>

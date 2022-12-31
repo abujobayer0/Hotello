@@ -1,19 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import logo from "../../../images/Logo/logo.png";
-import {
-  faPhoneFlip,
-  faCircle,
-  faChessBoard,
-  faAtlas,
-  faSignIn,
-  faSignOut,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPhoneFlip, faSignIn } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import UseUser from "../../../../hooks/UseUser";
+
 const Header = () => {
-  const [user, setUser] = UseUser();
-  console.log(user);
   const style = { fontFamily: "'Raleway', sans-serif" };
   const stylep = { fontFamily: " 'Questrial', sans-serif" };
   return (
@@ -32,8 +23,6 @@ const Header = () => {
         className="flex  items-center justify-center text-sm text-white"
       >
         <h2 className="border-r-2 pr-8">in New York</h2>
-
-        <img className="w-16 rounded-full" src={user.photoURL} alt="" />
 
         <div className="flex   h-10  gap-2 ml-4 justify-center items-center w-28">
           <Link to={"/login"}>

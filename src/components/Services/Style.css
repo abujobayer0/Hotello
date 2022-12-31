@@ -28,9 +28,9 @@
     text-align: center;
 }
 .middle::before{
-content: "";opacity: .5;
+content: "";opacity: .8;
 backdrop-filter: blur(80px);
-background-color: rgb(73, 43, 8);
+background-color: rgb(46, 19, 4);
 width: fit-content; height: 100%;position: absolute; top: 0; left:0; padding: 70%;
    
 }
