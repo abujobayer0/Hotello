@@ -32,7 +32,7 @@ const SignupForm = ({ setViewLayer }) => {
           {" "}
           <p
             onClick={() => setViewLayer(false)}
-            className="text-white underline cursor-pointer "
+            className="text-white rounded  glass text-lg px-2 hover:bg-stone-800 ease-in-out transition-all bg-stone-900  cursor-pointer "
           >
             {" "}
             Sign in

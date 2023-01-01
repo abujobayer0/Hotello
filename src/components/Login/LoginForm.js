@@ -42,17 +42,11 @@ const LoginForm = ({
               Remember me
             </label>
           </div>
-          <div className="flex">
-            <a
-              href="#!"
-              className="text-white hover:text-orange-300 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out"
-            >
-              Forgot password?
-            </a>{" "}
-            <span className="px-2 text-white">||</span>
+          <div className="flex text-lg">
+            <span className="px-2  text-white">||</span>
             <p
               onClick={() => setViewLayer(true)}
-              className="text-orange-400 cursor-pointer "
+              className="text-white rounded glass px-2 hover:bg-stone-800 ease-in-out transition-all bg-stone-900 cursor-pointer "
             >
               {" "}
               Sign up
