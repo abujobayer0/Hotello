@@ -27,8 +27,8 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-orange-100 h-[100vh] overflow-scroll overflow-x-hidden bgRoom ">
-      <section className="h-[100vh] glass w-full py-2  lg:h-[100vh] mt-12 lg:mt-0 md:mt-0">
+    <div className="bg-orange-100 h-[100vh] overflow-scroll overflow-x-hidden relative bgRoom ">
+      <section className="h-fit glass w-full py-2 relative flex flex-col lg:h-[100vh] mt-12 lg:mt-0 md:mt-0">
         <div className="container  px-6 py-12 h-full">
           <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
             <div className="md:w-8/12 lg:w-6/12 mb-12 md:mb-0">
@@ -53,10 +53,10 @@ const Login = () => {
             </div>
           </div>
         </div>
+        <div className="mt-4  absolute bottom-0  flex justify-center  items-center w-full  ">
+          <img className="w-28 py-2 underline " src={Logo} alt="" />
+        </div>
       </section>
-      <div className="mt-4  flex justify-center items-center w-full h-12 glass">
-        <img className="w-28 " src={Logo} alt="" />
-      </div>
     </div>
   );
 };
