@@ -16,26 +16,39 @@ const LoginForm = ({
     useSignInWithEmailAndPassword(auth);
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
-
+  const [alertUser, setAlertUser] = useState(false);
   if (user) {
     navigate(from, { replace: true });
   }
   const handleSubmit = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(email, password);
+    if (!user) {
+      setAlertUser(true);
+    }
   };
   return (
     <div className="TF">
       <form onSubmit={handleSubmit}>
         <div className="mb-6">
+          {alertUser === true ? (
+            <label className="text-red-500" htmlFor="name">
+              User Not Found,Please Sign Up.
+            </label>
+          ) : (
+            ""
+          )}
+
           <input
             type="email"
             required
+            name="email"
             onChange={(e) => setEmail(e.target.value)}
             className="form-control block w-full px-4 py-2 text-lg TF font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-orange-400 focus:outline-none"
             placeholder="Email address"
           />
         </div>
+
         <div className="mb-6">
           <input
             type="password"
