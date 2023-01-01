@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router-dom";
+import auth from "./firebase.init";
 
 const LoginForm = ({
-  handleSubmit,
-  handleEmailChange,
   handleGoogleSignIn,
-  handlePasswordChange,
+
   setViewLayer,
 }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const [signInWithEmailAndPassword, user, loading] =
+    useSignInWithEmailAndPassword(auth);
+  if (user) {
+    navigate("/home");
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(email, password);
+  };
   return (
     <div className="TF">
       <form onSubmit={handleSubmit}>
@@ -14,7 +28,7 @@ const LoginForm = ({
           <input
             type="email"
             required
-            onChange={handleEmailChange}
+            onChange={(e) => setEmail(e.target.value)}
             className="form-control block w-full px-4 py-2 text-lg TF font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-orange-400 focus:outline-none"
             placeholder="Email address"
           />
@@ -22,11 +36,14 @@ const LoginForm = ({
         <div className="mb-6">
           <input
             type="password"
-            onChange={handlePasswordChange}
+            onChange={(e) => setPassword(e.target.value)}
             className="form-control block w-full px-4 py-2 text-lg TF font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-orange-400 focus:outline-none"
             required
             placeholder="Password"
           />
+        </div>
+        <div>
+          {loading && <p className="text-white animate-pulse">Loading...</p>}
         </div>
         <div className="flex justify-between items-center mb-6">
           <div className="form-group form-check">
@@ -36,7 +53,7 @@ const LoginForm = ({
               id="exampleCheck3"
             />
             <label
-              className="form-check-label inline-block text-gray-800"
+              className="form-check-label inline-block lg:text-white text-gray-800"
               for="exampleCheck2"
             >
               Remember me
@@ -46,7 +63,7 @@ const LoginForm = ({
             <span className="px-2  text-white">||</span>
             <p
               onClick={() => setViewLayer(true)}
-              className="text-white rounded glass px-2 hover:bg-stone-800 ease-in-out transition-all bg-stone-900 cursor-pointer "
+              className="text-white rounded glass px-2 hover:bg-stone-800 ease-in-out transition-all bg-stone-900 lg:bg-neutral-focus lg:hover:bg-neutral  cursor-pointer "
             >
               {" "}
               Sign up
@@ -68,7 +85,7 @@ const LoginForm = ({
         </div>
         <a
           onClick={handleGoogleSignIn}
-          className="px-7 gap-2  hover:bg-stone-900 bg-stone-800 glass py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
+          className="px-7 gap-2  hover:bg-stone-900 bg-stone-800 lg:bg-neutral-focus lg:hover:bg-neutral glass py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
           href="#!"
           role="button"
           data-mdb-ripple="true"
