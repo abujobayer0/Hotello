@@ -6,11 +6,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import TypewriterComponent from "typewriter-effect";
 import Footer from "../Home/Shared/Footer/Footer";
 
-import zubayer from "./WhatsApp Image 2022-12-19 at 4.54.35 AM.jpeg";
 const Contact = () => {
   const [name, setName] = useState([]);
   const [email, setEmail] = useState([]);
@@ -96,7 +94,11 @@ const Contact = () => {
               </div>
             </div>
             <div className="flex m-8 gap-8">
-              <img className="rounded-full w-16" src={zubayer} alt="" />{" "}
+              <img
+                className="rounded-full w-16"
+                src="https://lucky-dieffenbachia-591909.netlify.app/WhatsApp%20Image%202022-12-19%20at%204.54.35%20AM.jpeg"
+                alt=""
+              />{" "}
               <div>
                 <h1 className="text-[20px] text-[#3a3534]">Zubayer Munna </h1>{" "}
                 <p
