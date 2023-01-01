@@ -43,7 +43,14 @@ const LoginForm = ({
           />
         </div>
         <div>
-          {loading && <p className="text-white animate-pulse">Loading...</p>}
+          {loading && (
+            <p
+              className="text-white animate-pulse
+          "
+            >
+              Loading...
+            </p>
+          )}
         </div>
         <div className="flex justify-between items-center mb-6">
           <div className="form-group form-check">
@@ -53,7 +60,7 @@ const LoginForm = ({
               id="exampleCheck3"
             />
             <label
-              className="form-check-label inline-block lg:text-white text-gray-800"
+              className="form-check-label inline-block text-white "
               for="exampleCheck2"
             >
               Remember me

@@ -10,7 +10,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
 const Room = ({ name, price, description, img, childern, guest, bed }) => {
-  console.log(name);
   return (
     <motion.div
       layout

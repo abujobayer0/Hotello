@@ -27,7 +27,7 @@ const RoomDetail = () => {
   const { roomsId } = useParams();
   const id = parseInt(roomsId);
   const thisRoom = productsData.find((room) => room.id === id);
-  console.log(thisRoom);
+
   return (
     <div>
       <div className="bgRoom w-full">

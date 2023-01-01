@@ -21,10 +21,8 @@ const News = () => {
         setNews(data);
       });
   }, []);
-  // console.log(
 
   //   search.filter((m) => m.name.toLowerCase().includes("new") === true)
-  // );
 
   return (
     <div className="w-full  flex flex-col  relative bgRoom">

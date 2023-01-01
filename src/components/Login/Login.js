@@ -59,7 +59,7 @@ const Login = () => {
 
   const handleSignUpSubmit = (e) => {
     e.preventDefault();
-    console.log("clicked");
+
     if (signUpPassword === signUpConfirmPassword) {
       createUserWithEmailAndPassword(signUpEmail, signUpPassword);
     } else {
@@ -69,7 +69,7 @@ const Login = () => {
   //signUp Hooks
   //end sign up
   return (
-    <div className="bg-orange-300 lg:bg-neutral flex justify-center items-center h-screen overflow-scroll overflow-x-hidden relative  ">
+    <div className="bg-neutral lg:bg-neutral flex justify-center items-center h-screen overflow-scroll overflow-x-hidden relative  ">
       <section className="h-fit  w-full py-2 relative flex flex-col lg:h-[100vh] mt-12 lg:mt-0 md:mt-0">
         <div className="container  px-6 py-12 h-full">
           <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
