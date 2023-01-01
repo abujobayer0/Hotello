@@ -27,7 +27,7 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-orange-100 h-[100vh] overflow-scroll overflow-x-hidden relative bgRoom ">
+    <div className="bg-orange-100 h-fit overflow-scroll overflow-x-hidden relative bgRoom ">
       <section className="h-fit glass w-full py-2 relative flex flex-col lg:h-[100vh] mt-12 lg:mt-0 md:mt-0">
         <div className="container  px-6 py-12 h-full">
           <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
