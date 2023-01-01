@@ -18,6 +18,7 @@ import NewsDetail from "./components/News/NewsDetail";
 import ServicesDetail from "./components/Services/ServicesDetail";
 import CheckOutPage from "./components/CheckOutPage/CheckOutPage";
 import Login from "./components/Login/Login";
+import ReqireAuth from "./components/Login/ReqireAuth";
 function App() {
   return (
     <div className="App">
@@ -30,19 +31,38 @@ function App() {
         <Route path="/rooms" element={<Rooms></Rooms>}></Route>
         <Route
           path="/rooms/:roomsId"
-          element={<RoomDetail></RoomDetail>}
+          element={
+            <ReqireAuth>
+              <RoomDetail></RoomDetail>
+            </ReqireAuth>
+          }
         ></Route>
-        <Route path="/news/:newsId" element={<NewsDetail></NewsDetail>}></Route>
+        <Route
+          path="/news/:newsId"
+          element={
+            <ReqireAuth>
+              <NewsDetail></NewsDetail>
+            </ReqireAuth>
+          }
+        ></Route>
         <Route path="/services" element={<Services></Services>}></Route>
         <Route
           path="/services/:serviceId"
-          element={<ServicesDetail></ServicesDetail>}
+          element={
+            <ReqireAuth>
+              <ServicesDetail></ServicesDetail>
+            </ReqireAuth>
+          }
         ></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/news" element={<News></News>}></Route>
         <Route
           path="/checkout/:checkoutId"
-          element={<CheckOutPage></CheckOutPage>}
+          element={
+            <ReqireAuth>
+              <CheckOutPage></CheckOutPage>
+            </ReqireAuth>
+          }
         ></Route>
         <Route path="/gallery" element={<Gallery></Gallery>}></Route>
         <Route path="/about" element={<About></About>}></Route>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import auth from "./firebase.init";
 
 const LoginForm = ({
@@ -14,8 +14,11 @@ const LoginForm = ({
   const navigate = useNavigate();
   const [signInWithEmailAndPassword, user, loading] =
     useSignInWithEmailAndPassword(auth);
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
   if (user) {
-    navigate("/home");
+    navigate(from, { replace: true });
   }
   const handleSubmit = (e) => {
     e.preventDefault();

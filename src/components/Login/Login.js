@@ -8,7 +8,7 @@ import {
 } from "react-firebase-hooks/auth";
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 const Login = () => {
   const provider = new GoogleAuthProvider();
   //login
@@ -27,18 +27,8 @@ const Login = () => {
   const [createUserWithEmailAndPassword, user, loading] =
     useCreateUserWithEmailAndPassword(auth);
   const navigate = useNavigate();
-  //sign in
-  // const handleEmailChange = (event) => {
-  //   setEmail(event.target.value);
-  // };
-  // const handlePasswordChange = (event) => {
-  //   setPassword(event.target.value);
-  // };
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   signInWithEmailAndPassword(email, password);
-  // };
-  //end sign in
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   //google auth
   const handleGoogleSignIn = () => {
@@ -54,7 +44,7 @@ const Login = () => {
     setsignUpError(e.target.value);
   };
   if (user) {
-    navigate("/home");
+    navigate(from, { replace: true });
   }
 
   const handleSignUpSubmit = (e) => {

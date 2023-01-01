@@ -6,14 +6,22 @@ import {
   faPhotoVideo,
   faServer,
   faSignIn,
+  faSignOut,
   faUserGroup,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { signOut } from "firebase/auth";
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../images/Logo/logo.png";
+import auth from "../../../Login/firebase.init";
 
 const NavBar = () => {
+  const [user] = useAuthState(auth);
+  const handleSignOut = () => {
+    signOut(auth);
+  };
   return (
     <div className="  z-10 w-full  justify-center  fixed lg:flex lg:absolute top-0 lg:top-28 text-white font-semibold text-sm items-center">
       <div className="hidden lg:flex w-fit gap-8 text-white justify-between">
@@ -42,11 +50,26 @@ const NavBar = () => {
       <div className="">
         <div className="justify-between relative flex-row-reverse navbar text-black bg-orange-400 w-full items-center lg:hidden ">
           {" "}
-          <Link className="absolute right-20 top-[30%]" to={"/login"}>
-            <a className="text-xl text-white" href="">
-              <FontAwesomeIcon icon={faSignIn} />
-            </a>
-          </Link>
+          {user ? (
+            <div className="absolute right-20 top-[30%] ">
+              <button
+                onClick={handleSignOut}
+                className="text-white flex underline px-2  rounded  text-lg TF items-center gap-2"
+              >
+                <span className="text-lg font-normal ">Sign Out</span>
+                <FontAwesomeIcon icon={faSignOut} />
+              </button>
+            </div>
+          ) : (
+            <Link className="absolute right-20 top-[30%]" to={"/login"}>
+              <a
+                className="text-white font-normal flex underline px-2  rounded  text-lg TF items-center gap-2"
+                href=""
+              >
+                Sign In <FontAwesomeIcon icon={faSignIn} />
+              </a>
+            </Link>
+          )}
           <div className="dropdown  dropdown-end ">
             <label
               tabIndex={0}
