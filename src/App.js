@@ -31,11 +31,7 @@ function App() {
         <Route path="/rooms" element={<Rooms></Rooms>}></Route>
         <Route
           path="/rooms/:roomsId"
-          element={
-            <ReqireAuth>
-              <RoomDetail></RoomDetail>
-            </ReqireAuth>
-          }
+          element={<RoomDetail></RoomDetail>}
         ></Route>
         <Route
           path="/news/:newsId"
