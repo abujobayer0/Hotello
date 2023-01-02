@@ -15,7 +15,12 @@ const SmallRoom = ({ room }) => {
         </Link>
       </div>
       <div>
-        <h1 className="text-lg  font-bold  text-gray-500">{name}</h1>
+        <Link to={`/rooms/${room.id}`}>
+          {" "}
+          <h1 className="text-lg  font-bold hover:text-orange-400 transition-all ease-in-out text-gray-500">
+            {name}
+          </h1>{" "}
+        </Link>
         <p className="text-sm">${price}</p>
       </div>
     </div>

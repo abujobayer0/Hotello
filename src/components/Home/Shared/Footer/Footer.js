@@ -51,6 +51,9 @@ const Footer = () => {
           <a className="link link-hover">Privacy policy</a>
           <a className="link link-hover">Cookie policy</a>
         </div>
+        <h2 className="TF font-normal text-xm absolute bottom-0  w-full flex justify-center  ">
+          © Zubayer Munna.All right reserved
+        </h2>
       </footer>
     </div>
   );
