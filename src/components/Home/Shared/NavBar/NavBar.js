@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { toast, Toaster } from "react-hot-toast";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../images/Logo/logo.png";
 import auth from "../../../Login/firebase.init";
@@ -22,8 +23,13 @@ const NavBar = () => {
   const handleSignOut = () => {
     signOut(auth);
   };
+  if (user) {
+  } else {
+    toast.error("sign in successfull");
+  }
   return (
     <div className="  z-10 w-full  justify-center  fixed lg:flex lg:absolute top-0 lg:top-28 text-white font-semibold text-sm items-center">
+      <Toaster />
       <div className="hidden lg:flex w-fit gap-8 text-white justify-between">
         <NavLink className="px-4 py-2" to="/home">
           HOME
@@ -51,7 +57,7 @@ const NavBar = () => {
         <div className="justify-between relative flex-row-reverse navbar text-black bg-orange-400 w-full items-center lg:hidden ">
           {" "}
           {user ? (
-            <div className="absolute right-20 top-[30%] ">
+            <div className="absolute cursor-pointer right-20 top-[30%] ">
               <button
                 onClick={handleSignOut}
                 className="text-white flex underline px-2  rounded  text-lg TF items-center gap-2"

@@ -29,6 +29,8 @@ const LoginForm = ({
   };
   return (
     <div className="TF">
+      <h1 className="text-white">default Email : info@gmail.com</h1>
+      <h1 className="text-white">default password : password</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-6">
           {alertUser === true ? (
